@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\2017_02_22_state_machine8.X.production.hex">
+  <executable name="dist/default/production\AER201.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>65536</length>
-      <used>12457</used>
-      <free>53079</free>
+      <used>12988</used>
+      <free>52548</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>3968</length>
-      <used>1072</used>
-      <free>2896</free>
+      <used>1081</used>
+      <free>2887</free>
     </memory>
   </executable>
 </project>

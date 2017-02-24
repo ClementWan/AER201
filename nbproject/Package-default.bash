@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/2017_02_22_state_machine8.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=2017_02_22_state_machine8.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=20170222statemachine8.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/AER201.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=AER201.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=aer201/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/20170222statemachine8.x/bin
+makeDirectory ${TMPDIR}/aer201/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/20170222statemachine8.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/aer201.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/20170222statemachine8.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/aer201.tar *
 checkReturnCode
 
 # Cleanup

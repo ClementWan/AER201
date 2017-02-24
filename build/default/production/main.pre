@@ -3858,6 +3858,7 @@ char ndisplay1[18];
 
 char PROX1_PIN=0;
 char PROX2_PIN=1;
+char DIST1_TRIG=5;
 char DIST1_PIN=0;
 char IR1_PIN=1;
 char IR2_PIN=2;
@@ -3866,6 +3867,11 @@ int PROX2[5];
 int DIST1[5];
 int IR1[5];
 int IR2[5];
+int DIST_THRESHOLD_LOW=1024/4-1;
+int DIST_THRESHOLD_HI=1024*3/4-1;
+int IR_THRESHOLD_LOW=1024/4-1;
+int IR_THRESHOLD_HI=1024*3/4-1;
+
 
 int discretize;
 int discretize_counter;
@@ -3879,10 +3885,9 @@ int latestSortedBottleTime[7];
 int bottle_type=0;
 
 
-
 void main(void) {
 
-# 103
+# 108
 TRISC = 0x00;
 TRISD = 0x00;
 TRISB = 0xFF;
@@ -3908,7 +3913,7 @@ update_lcd();
 _delay((unsigned long)((50)*(10000000/4000.0)));
 (INTCONbits.GIE = 0);
 
-# 134
+# 139
 }
 
 return;
@@ -4000,7 +4005,7 @@ nstate='r';
 }
 state=nstate;
 
-# 231
+# 236
 if (state!='m'&&state!='l'&&state!='c')
 {
 menuIndex=1;
@@ -4157,7 +4162,7 @@ break;
 }
 INT1IF = 0;
 
-# 393
+# 398
 }
 }
 void set_time(void){
@@ -4175,10 +4180,29 @@ void read_sensors(void){
 if (state!='s'){
 return;
 }
-readADC(1);
-int a=16*16*ADRESH+ADRESL;
 
-# 424
+for(char i=0;i<5-1;i++){
+PROX1[i+1]=PROX1[i];
+PROX2[i+1]=PROX2[i];
+DIST1[i+1]=DIST1[i];
+IR1[i+1]=IR1[i];
+IR2[i+1]=IR2[i];
+}
+
+
+
+
+readADC(DIST1_PIN);
+DIST1[0]=16*16*ADRESH+ADRESL;
+readADC(IR1_PIN);
+IR1[0]=16*16*ADRESH+ADRESL;
+readADC(IR2_PIN);
+IR2[0]=16*16*ADRESH+ADRESL;
+
+PROX1[0]=(PORTE>>PROX1_PIN)&1;
+PROX2[0]=(PORTE>>PROX2_PIN)&1;
+
+# 450
 }
 void sort (void){
 
@@ -4245,10 +4269,73 @@ release_counter--;
 if (time_i[1]*60-latestSortedBottleTime[1]*60+time_i[0]-latestSortedBottleTime[0]>=15)
 nstate='e';
 
-# 518
+# 544
 }
 int _measure(void){
-return 1;
+
+# 557
+int measurement=0;
+
+
+for (char i=0;i<5;i++)
+measurement+=PROX1[i];
+if (measurement%5!=0)
+return 0;
+for (char i=0;i<5;i++)
+measurement+=PROX2[i];
+if (measurement%5!=0)
+return 0;
+
+
+for (char i=0;i<5;i++)
+measurement+=(DIST1[i]<DIST_THRESHOLD_LOW);
+if (measurement%5!=0)
+return 0;
+for (char i=0;i<5;i++)
+measurement+=(DIST1[i]<DIST_THRESHOLD_HI);
+if (measurement%5!=0)
+return 0;
+
+
+for (char i=0;i<5;i++)
+measurement+=(IR1[i]<IR_THRESHOLD_LOW);
+if (measurement%5!=0)
+return 0;
+
+for (char i=0;i<5;i++)
+measurement+=(IR1[i]<IR_THRESHOLD_HI);
+if (measurement%5!=0)
+return 0;
+
+for (char i=0;i<5;i++)
+measurement+=(IR2[i]<IR_THRESHOLD_LOW);
+if (measurement%5!=0)
+return 0;
+
+for (char i=0;i<5;i++)
+measurement+=(IR1[i]<IR_THRESHOLD_HI);
+if (measurement%5!=0)
+return 0;
+
+
+measurement=0;
+
+if (DIST1[0]>DIST_THRESHOLD_HI)
+return 0;
+if (DIST1[0]>DIST_THRESHOLD_LOW){
+measurement+=PROX2[0];
+}
+else
+measurement+=PROX1[0];
+
+
+if (IR1[0]>IR_THRESHOLD_HI||IR2[0]>IR_THRESHOLD_HI);
+else if (IR1[0]<IR_THRESHOLD_LOW&&IR2[0]<IR_THRESHOLD_LOW)
+measurement+=2;
+else
+return 0;
+
+return measurement;
 }
 void readADC(char channel){
 

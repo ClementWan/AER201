@@ -1,4 +1,3 @@
-//test change
 //TIMER
 //use timer to keep track of operation time
 //the ending menu is complete, the operation time and running time are displayed
@@ -70,9 +69,10 @@ char ndisplay0[18];
 char ndisplay1[18];
 
 
-char PROX1_PIN=0;
+char PROX1_PIN=0;//digital pins on port E
 char PROX2_PIN=1;
-char DIST1_PIN=0;
+char DIST1_TRIG=5;//RC5 triggers DIST1 to be echo'ed
+char DIST1_PIN=0;//analog pins on port A
 char IR1_PIN=1;
 char IR2_PIN=2;
 int PROX1[5];
@@ -80,6 +80,11 @@ int PROX2[5];
 int DIST1[5];
 int IR1[5];
 int IR2[5];
+int DIST_THRESHOLD_LOW=1024/4-1;
+int DIST_THRESHOLD_HI=1024*3/4-1;
+int IR_THRESHOLD_LOW=1024/4-1;
+int IR_THRESHOLD_HI=1024*3/4-1;
+
 
 int discretize;//=3000/delay;//3 seconds for discretize step at the start of the default substate
 int discretize_counter;//=3000/delay;
@@ -93,7 +98,6 @@ int latestSortedBottleTime[7];//if no bottle is successfully sorted in 15 second
 int bottle_type=0;//0 when no bottle identified yet, 1-4 for each en, ec, yn, yc
 //char substate='d';//default, release, commented for now as the "States" are determined by discretize measure, and release countdown values
     //</editor-fold>
-
 void main(void) {
     //discretize=3000/delay;//3 seconds for discretize step at the start of the default substate
     //discretize_counter=3000/delay;
@@ -103,7 +107,7 @@ void main(void) {
     
     TRISC = 0x00;
     TRISD = 0x00;   //All output mode
-    TRISB = 0xFF;   //All input mode
+    TRISB = 0xFF;   //All input mode    
     LATB = 0x00; 
     LATC = 0x00;
     ADCON0 = 0x00;  //Disable ADC
@@ -408,10 +412,31 @@ void read_sensors(void){
     if (state!='s'){
         return;
     }
-    readADC(1);
-    int a=16*16*ADRESH+ADRESL;
+    // <editor-fold defaultstate="collapsed" desc="RIGHT SHIFT ARRAYS">
+    for(char i=0;i<5-1;i++){
+        PROX1[i+1]=PROX1[i];
+        PROX2[i+1]=PROX2[i];
+        DIST1[i+1]=DIST1[i];
+        IR1[i+1]=IR1[i];
+        IR2[i+1]=IR2[i];
+    }
+    //</editor-fold>
+    
+    // <editor-fold defaultstate="collapsed" desc="READ SENSORS">
+    //analog reads PORT A
+    readADC(DIST1_PIN);
+    DIST1[0]=16*16*ADRESH+ADRESL;
+    readADC(IR1_PIN);
+    IR1[0]=16*16*ADRESH+ADRESL;
+    readADC(IR2_PIN);
+    IR2[0]=16*16*ADRESH+ADRESL;
+    //digital reads PORT E
+    PROX1[0]=(PORTE>>PROX1_PIN)&1;
+    PROX2[0]=(PORTE>>PROX2_PIN)&1;
+    //</editor-fold>
+    
     /*
-          * reminder of sorting subsequence:
+     * reminder of sorting subsequence:
      * constant readings stored in arrays (past 5 should do of each distance1, proximity1, proximity2, IR1, IR2)
      * 
      * REFER TO "SENSING BOX CODING DIAGRAM"
@@ -518,7 +543,79 @@ void sort (void){
      */
 }
 int _measure(void){
-    return 1;
+    /* 
+     according to the sensing diagram:
+     * if dist is above the high threshold, the bottle is not there. 
+     * if dist is above the low threshold, only listen to proximity 2 sensor
+     * if dist is below the low threshold, only listen to proximity 1 sensor
+     * if the proximity sensor is high, theres no cap
+     * if the proximity sensor is low, there is a cap
+     * if either proximity sensor reads high, the bottle is eska
+     * return 0 for no bottle, 1 for en, 2 for ew, 3 for yn, 4 for yc
+     * if at any point the 5 readings "disagree" on a threshold, return 0
+     */
+    int measurement=0;
+    // <editor-fold defaultstate="collapsed" desc="DO THE SENSORS AGREE">
+    // <editor-fold defaultstate="collapsed" desc="PROXIMITY">
+    for (char i=0;i<5;i++)
+        measurement+=PROX1[i];
+    if (measurement%5!=0)
+        return 0;
+    for (char i=0;i<5;i++)
+        measurement+=PROX2[i];
+    if (measurement%5!=0)
+        return 0;
+    //</editor-fold>
+    // <editor-fold defaultstate="collapsed" desc="DISTANCE">
+    for (char i=0;i<5;i++)
+        measurement+=(DIST1[i]<DIST_THRESHOLD_LOW);
+    if (measurement%5!=0)
+        return 0;
+    for (char i=0;i<5;i++)
+        measurement+=(DIST1[i]<DIST_THRESHOLD_HI);
+    if (measurement%5!=0)
+        return 0;
+    //</editor-fold>
+    // <editor-fold defaultstate="collapsed" desc="IR">
+    for (char i=0;i<5;i++)
+        measurement+=(IR1[i]<IR_THRESHOLD_LOW);
+    if (measurement%5!=0)
+        return 0;
+
+    for (char i=0;i<5;i++)
+        measurement+=(IR1[i]<IR_THRESHOLD_HI);
+    if (measurement%5!=0)
+        return 0;
+    
+    for (char i=0;i<5;i++)
+        measurement+=(IR2[i]<IR_THRESHOLD_LOW);
+    if (measurement%5!=0)
+        return 0;
+    
+    for (char i=0;i<5;i++)
+        measurement+=(IR1[i]<IR_THRESHOLD_HI);
+    if (measurement%5!=0)
+        return 0;
+    //</editor-fold>
+    //</editor-fold>
+    measurement=0;
+    // <editor-fold defaultstate="collapsed" desc="DISTANCE+PROXIMITY">
+    if (DIST1[0]>DIST_THRESHOLD_HI)
+        return 0;
+    if (DIST1[0]>DIST_THRESHOLD_LOW){
+        measurement+=PROX2[0];
+    }
+    else
+        measurement+=PROX1[0];
+    //</editor-fold>
+    // <editor-fold defaultstate="collapsed" desc="IR">
+    if (IR1[0]>IR_THRESHOLD_HI||IR2[0]>IR_THRESHOLD_HI);//eska if at least one sensor reads high
+    else if (IR1[0]<IR_THRESHOLD_LOW&&IR2[0]<IR_THRESHOLD_LOW)
+        measurement+=2;//yop if both sensors read low
+    else
+        return 0;//keep measuring if the ir sensors don't agree
+    //</editor-fold>
+    return measurement;
 }
 void readADC(char channel){
     // Select A2D channel to read
