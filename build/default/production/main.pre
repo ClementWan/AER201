@@ -3891,6 +3891,7 @@ void main(void) {
 TRISC = 0x00;
 TRISD = 0x00;
 TRISB = 0xFF;
+TRISE = 0x03;
 LATB = 0x00;
 LATC = 0x00;
 ADCON0 = 0x00;
@@ -3913,7 +3914,7 @@ update_lcd();
 _delay((unsigned long)((50)*(10000000/4000.0)));
 (INTCONbits.GIE = 0);
 
-# 139
+# 140
 }
 
 return;
@@ -4005,7 +4006,7 @@ nstate='r';
 }
 state=nstate;
 
-# 236
+# 237
 if (state!='m'&&state!='l'&&state!='c')
 {
 menuIndex=1;
@@ -4162,7 +4163,7 @@ break;
 }
 INT1IF = 0;
 
-# 398
+# 399
 }
 }
 void set_time(void){
@@ -4202,7 +4203,7 @@ IR2[0]=16*16*ADRESH+ADRESL;
 PROX1[0]=(PORTE>>PROX1_PIN)&1;
 PROX2[0]=(PORTE>>PROX2_PIN)&1;
 
-# 450
+# 451
 }
 void sort (void){
 
@@ -4269,11 +4270,11 @@ release_counter--;
 if (time_i[1]*60-latestSortedBottleTime[1]*60+time_i[0]-latestSortedBottleTime[0]>=15)
 nstate='e';
 
-# 544
+# 545
 }
 int _measure(void){
 
-# 557
+# 558
 int measurement=0;
 
 

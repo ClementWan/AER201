@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
+$C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -19,49 +19,49 @@ config CONFIG 0 300000 300000 E 1
 $dist/default/production\AER201.production.obj
 cinit CODE 0 2A0C 2A0C 92 1
 intcode_body CODE 0 11EE 11EE 5CC 1
-text0 CODE 0 2B86 2B86 68 1
+text0 CODE 0 2B86 2B86 6C 1
 text1 CODE 0 1F24 1F24 2BA 1
 text2 CODE 0 26F2 26F2 FE 1
-text3 CODE 0 300C 300C 32 1
-text4 CODE 0 2D7A 2D7A 56 1
-text5 CODE 0 2ECA 2ECA 4A 1
+text3 CODE 0 3010 3010 32 1
+text4 CODE 0 2D7E 2D7E 56 1
+text5 CODE 0 2ECE 2ECE 4A 1
 text6 CODE 0 241A 241A 16C 1
 text7 CODE 0 17BA 17BA 49A 1
-text8 CODE 0 2E26 2E26 52 1
+text8 CODE 0 2E2A 2E2A 52 1
 text9 CODE 0 12 12 984 1
-text10 CODE 0 3106 3106 16 1
-text11 CODE 0 3098 3098 2A 1
-text12 CODE 0 2C56 2C56 62 1
+text10 CODE 0 310A 310A 16 1
+text11 CODE 0 309C 309C 2A 1
+text12 CODE 0 2C5A 2C5A 62 1
 text13 CODE 0 2A9E 2A9E 78 1
 text14 CODE 0 296A 296A A2 1
 text15 CODE 0 27F0 27F0 BE 1
 text16 CODE 0 2586 2586 16C 1
-text17 CODE 0 2FA0 2FA0 36 1
-text18 CODE 0 303E 303E 2E 1
-text19 CODE 0 2CB8 2CB8 62 1
-text20 CODE 0 317C 317C A 1
-text21 CODE 0 3186 3186 8 1
-text22 CODE 0 318E 318E 8 1
-text23 CODE 0 3132 3132 14 1
+text17 CODE 0 2FA4 2FA4 36 1
+text18 CODE 0 3042 3042 2E 1
+text19 CODE 0 2CBC 2CBC 62 1
+text20 CODE 0 3180 3180 A 1
+text21 CODE 0 318A 318A 8 1
+text22 CODE 0 3192 3192 8 1
+text23 CODE 0 3136 3136 14 1
 text24 CODE 0 21DE 21DE 23C 1
-text25 CODE 0 306C 306C 2C 1
-text26 CODE 0 2F14 2F14 4A 1
-text27 CODE 0 3146 3146 10 1
-text28 CODE 0 2BEE 2BEE 68 1
-text29 CODE 0 2D1A 2D1A 60 1
+text25 CODE 0 3070 3070 2C 1
+text26 CODE 0 2F18 2F18 4A 1
+text27 CODE 0 314A 314A 10 1
+text28 CODE 0 2BF2 2BF2 68 1
+text29 CODE 0 2D1E 2D1E 60 1
 text30 CODE 0 28AE 28AE BC 1
-text32 CODE 0 2FD6 2FD6 36 1
+text32 CODE 0 2FDA 2FDA 36 1
 text33 CODE 0 996 996 858 1
-text34 CODE 0 3164 3164 C 1
-text35 CODE 0 30E8 30E8 1E 1
-text36 CODE 0 30C2 30C2 26 1
-text37 CODE 0 2F5E 2F5E 42 1
-text38 CODE 0 2E78 2E78 52 1
-text39 CODE 0 3170 3170 C 1
-text40 CODE 0 2DD0 2DD0 56 1
+text34 CODE 0 3168 3168 C 1
+text35 CODE 0 30EC 30EC 1E 1
+text36 CODE 0 30C6 30C6 26 1
+text37 CODE 0 2F62 2F62 42 1
+text38 CODE 0 2E7C 2E7C 52 1
+text39 CODE 0 3174 3174 C 1
+text40 CODE 0 2DD4 2DD4 56 1
 text41 CODE 0 2B16 2B16 70 1
 idataBIGRAM CODE 0 1C54 1C54 2D0 1
-idataCOMRAM CODE 0 3156 3156 D 1
+idataCOMRAM CODE 0 315A 315A D 1
 cstackCOMRAM COMRAM 1 1 1 3D 1
 cstackBANK0 BANK0 1 80 80 3A 1
 cstackBANK1 BANK1 1 16E 16E A 1
@@ -69,7 +69,7 @@ temp COMRAM 1 77 77 1 1
 bssBANK0 BANK0 1 BA BA 2B 1
 bssBANK1 BANK1 1 100 100 6E 1
 intcode CODE 0 8 8 6 1
-idataBANK0 CODE 0 311C 311C 15 1
+idataBANK0 CODE 0 3120 3120 15 1
 dataBANK0 BANK0 1 E5 E5 15 1
 dataBIGRAM BIGRAM 1 178 178 2D0 1
 dataCOMRAM COMRAM 1 6A 6A D 1
@@ -92,17 +92,17 @@ BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
-CONST 3131-3131 1
-CONST 3163-3163 1
-CONST 3196-FED3 1
+CONST 3135-3135 1
+CONST 3167-3167 1
+CONST 319A-FED3 1
 STACK 448-F7F 1
-SMALLCONST 3131-3131 1
-SMALLCONST 3163-3163 1
-SMALLCONST 3196-FED3 1
+SMALLCONST 3135-3135 1
+SMALLCONST 3167-3167 1
+SMALLCONST 319A-FED3 1
 CODE 4-7 1
-CODE 3131-3131 1
-CODE 3163-3163 1
-CODE 3196-FED3 1
+CODE 3135-3135 1
+CODE 3167-3167 1
+CODE 319A-FED3 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -114,9 +114,9 @@ BIGRAM FA-FF 1
 BIGRAM 448-F7F 1
 COMRAM 78-7F 1
 EEDATA F00000-F003FF 1
-MEDIUMCONST 3131-3131 1
-MEDIUMCONST 3163-3163 1
-MEDIUMCONST 3196-FED3 1
+MEDIUMCONST 3135-3135 1
+MEDIUMCONST 3167-3167 1
+MEDIUMCONST 319A-FED3 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -132,7 +132,7 @@ MEDIUMCONST 3196-FED3 1
 %LINETAB
 $dist/default/production\AER201.production.obj
 8 intcode CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lldiv.c
-8 intcode CODE >297:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+8 intcode CODE >298:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2B16 text41 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
 2B16 text41 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
 2B1A text41 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
@@ -153,69 +153,69 @@ $dist/default/production\AER201.production.obj
 2B6E text41 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
 2B74 text41 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
 2B7C text41 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
-2DD0 text40 CODE >35:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2DD2 text40 CODE >37:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2DD8 text40 CODE >38:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2DDE text40 CODE >39:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2DE4 text40 CODE >41:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2DE6 text40 CODE >42:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2DEE text40 CODE >43:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2DF0 text40 CODE >44:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2DF8 text40 CODE >46:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2DFE text40 CODE >48:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2E04 text40 CODE >49:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2E0A text40 CODE >50:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2E10 text40 CODE >52:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2E12 text40 CODE >53:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2E1A text40 CODE >54:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2E1C text40 CODE >55:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2E24 text40 CODE >56:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-3170 text39 CODE >25:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-3172 text39 CODE >26:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-3174 text39 CODE >27:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-317A text39 CODE >28:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2E78 text38 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2E78 text38 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2E80 text38 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2E88 text38 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2E8C text38 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2E8E text38 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2E94 text38 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2E96 text38 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2E9A text38 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2EA0 text38 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2EAC text38 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2EB4 text38 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2EB6 text38 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2EBC text38 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2EC0 text38 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2EC0 text38 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2EC8 text38 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2F5E text37 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F5E text37 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F66 text37 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F6A text37 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F6C text37 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F72 text37 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F74 text37 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F78 text37 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F84 text37 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F8C text37 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F92 text37 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F96 text37 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F96 text37 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2F9E text37 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-30C2 text36 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-30C2 text36 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-30CE text36 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-30D6 text36 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-30DE text36 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-30E8 text35 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
-30EA text35 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
-3164 text34 CODE >30:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-3166 text34 CODE >31:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-3168 text34 CODE >32:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-316E text34 CODE >33:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2DD4 text40 CODE >35:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2DD6 text40 CODE >37:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2DDC text40 CODE >38:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2DE2 text40 CODE >39:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2DE8 text40 CODE >41:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2DEA text40 CODE >42:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2DF2 text40 CODE >43:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2DF4 text40 CODE >44:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2DFC text40 CODE >46:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2E02 text40 CODE >48:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2E08 text40 CODE >49:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2E0E text40 CODE >50:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2E14 text40 CODE >52:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2E16 text40 CODE >53:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2E1E text40 CODE >54:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2E20 text40 CODE >55:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2E28 text40 CODE >56:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+3174 text39 CODE >25:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+3176 text39 CODE >26:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+3178 text39 CODE >27:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+317E text39 CODE >28:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2E7C text38 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2E7C text38 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2E84 text38 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2E8C text38 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2E90 text38 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2E92 text38 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2E98 text38 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2E9A text38 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2E9E text38 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2EA4 text38 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2EB0 text38 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2EB8 text38 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2EBA text38 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2EC0 text38 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2EC4 text38 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2EC4 text38 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2ECC text38 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
+2F62 text37 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F62 text37 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F6A text37 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F6E text37 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F70 text37 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F76 text37 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F78 text37 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F7C text37 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F88 text37 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F90 text37 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F96 text37 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F9A text37 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2F9A text37 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2FA2 text37 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+30C6 text36 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+30C6 text36 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+30D2 text36 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+30DA text36 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+30E2 text36 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+30EC text35 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
+30EE text35 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
+3168 text34 CODE >30:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+316A text34 CODE >31:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+316C text34 CODE >32:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+3172 text34 CODE >33:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
 996 text33 CODE >458:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
 996 text33 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
 99A text33 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
@@ -298,81 +298,81 @@ F9A text33 CODE >1430:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\
 11A4 text33 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
 11AC text33 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
 11E4 text33 CODE >1540:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
-2FD6 text32 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-2FD6 text32 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-2FDE text32 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-2FE6 text32 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-2FEE text32 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-11EE intcode_body CODE >297:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1228 intcode_body CODE >299:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-122C intcode_body CODE >301:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1234 intcode_body CODE >302:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1236 intcode_body CODE >304:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-124E intcode_body CODE >305:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-127A intcode_body CODE >304:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1280 intcode_body CODE >306:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-12BC intcode_body CODE >307:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-12C4 intcode_body CODE >308:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-12FA intcode_body CODE >309:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1304 intcode_body CODE >310:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1326 intcode_body CODE >312:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-132A intcode_body CODE >314:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-132E intcode_body CODE >316:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1332 intcode_body CODE >319:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1338 intcode_body CODE >320:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1344 intcode_body CODE >321:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-134A intcode_body CODE >322:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1356 intcode_body CODE >323:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-135C intcode_body CODE >325:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-135E intcode_body CODE >311:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1384 intcode_body CODE >333:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-139C intcode_body CODE >334:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-13C8 intcode_body CODE >333:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-13CE intcode_body CODE >336:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-140A intcode_body CODE >340:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1410 intcode_body CODE >341:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1412 intcode_body CODE >342:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1448 intcode_body CODE >343:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1452 intcode_body CODE >348:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-146A intcode_body CODE >349:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1496 intcode_body CODE >348:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-149C intcode_body CODE >351:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-14D8 intcode_body CODE >352:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-14E0 intcode_body CODE >353:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1516 intcode_body CODE >354:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1520 intcode_body CODE >355:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1540 intcode_body CODE >356:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1544 intcode_body CODE >359:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1564 intcode_body CODE >360:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-156A intcode_body CODE >361:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1586 intcode_body CODE >362:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1588 intcode_body CODE >363:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-15A8 intcode_body CODE >364:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-15AE intcode_body CODE >365:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-15CA intcode_body CODE >366:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-15CC intcode_body CODE >367:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-15EC intcode_body CODE >368:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-15F2 intcode_body CODE >369:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-160E intcode_body CODE >370:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1610 intcode_body CODE >371:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1630 intcode_body CODE >372:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1636 intcode_body CODE >373:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1652 intcode_body CODE >374:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1654 intcode_body CODE >375:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1694 intcode_body CODE >376:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1698 intcode_body CODE >379:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-16D4 intcode_body CODE >380:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-16DC intcode_body CODE >381:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1712 intcode_body CODE >382:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-171C intcode_body CODE >383:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-173C intcode_body CODE >384:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1742 intcode_body CODE >385:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1744 intcode_body CODE >387:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1750 intcode_body CODE >389:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1752 intcode_body CODE >302:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-177C intcode_body CODE >389:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2FDA text32 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+2FDA text32 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+2FE2 text32 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+2FEA text32 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+2FF2 text32 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+11EE intcode_body CODE >298:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1228 intcode_body CODE >300:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+122C intcode_body CODE >302:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1234 intcode_body CODE >303:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1236 intcode_body CODE >305:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+124E intcode_body CODE >306:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+127A intcode_body CODE >305:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1280 intcode_body CODE >307:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+12BC intcode_body CODE >308:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+12C4 intcode_body CODE >309:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+12FA intcode_body CODE >310:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1304 intcode_body CODE >311:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1326 intcode_body CODE >313:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+132A intcode_body CODE >315:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+132E intcode_body CODE >317:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1332 intcode_body CODE >320:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1338 intcode_body CODE >321:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1344 intcode_body CODE >322:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+134A intcode_body CODE >323:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1356 intcode_body CODE >324:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+135C intcode_body CODE >326:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+135E intcode_body CODE >312:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1384 intcode_body CODE >334:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+139C intcode_body CODE >335:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+13C8 intcode_body CODE >334:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+13CE intcode_body CODE >337:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+140A intcode_body CODE >341:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1410 intcode_body CODE >342:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1412 intcode_body CODE >343:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1448 intcode_body CODE >344:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1452 intcode_body CODE >349:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+146A intcode_body CODE >350:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1496 intcode_body CODE >349:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+149C intcode_body CODE >352:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+14D8 intcode_body CODE >353:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+14E0 intcode_body CODE >354:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1516 intcode_body CODE >355:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1520 intcode_body CODE >356:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1540 intcode_body CODE >357:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1544 intcode_body CODE >360:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1564 intcode_body CODE >361:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+156A intcode_body CODE >362:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1586 intcode_body CODE >363:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1588 intcode_body CODE >364:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+15A8 intcode_body CODE >365:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+15AE intcode_body CODE >366:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+15CA intcode_body CODE >367:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+15CC intcode_body CODE >368:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+15EC intcode_body CODE >369:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+15F2 intcode_body CODE >370:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+160E intcode_body CODE >371:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1610 intcode_body CODE >372:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1630 intcode_body CODE >373:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1636 intcode_body CODE >374:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1652 intcode_body CODE >375:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1654 intcode_body CODE >376:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1694 intcode_body CODE >377:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1698 intcode_body CODE >380:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+16D4 intcode_body CODE >381:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+16DC intcode_body CODE >382:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1712 intcode_body CODE >383:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+171C intcode_body CODE >384:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+173C intcode_body CODE >385:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1742 intcode_body CODE >386:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1744 intcode_body CODE >388:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1750 intcode_body CODE >390:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1752 intcode_body CODE >303:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 177C intcode_body CODE >390:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-177E intcode_body CODE >399:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+177C intcode_body CODE >391:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+177E intcode_body CODE >400:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 28AE text30 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lldiv.c
 28AE text30 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lldiv.c
 28C0 text30 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lldiv.c
@@ -390,120 +390,120 @@ F9A text33 CODE >1430:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\
 2958 text30 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lldiv.c
 2958 text30 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lldiv.c
 2968 text30 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lldiv.c
-2D1A text29 CODE >13:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2D1A text29 CODE >16:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2D1E text29 CODE >17:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2D22 text29 CODE >18:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2D26 text29 CODE >19:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2D74 text29 CODE >20:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2D76 text29 CODE >21:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2D78 text29 CODE >22:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2BEE text28 CODE >35:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2BF2 text28 CODE >37:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2BFC text28 CODE >38:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C02 text28 CODE >39:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C0A text28 CODE >41:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C0C text28 CODE >42:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C14 text28 CODE >43:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C16 text28 CODE >44:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C1E text28 CODE >46:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C28 text28 CODE >48:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C32 text28 CODE >49:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C38 text28 CODE >50:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C40 text28 CODE >52:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C42 text28 CODE >53:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C4A text28 CODE >54:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C4C text28 CODE >55:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2C54 text28 CODE >56:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-3146 text27 CODE >25:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-314A text27 CODE >26:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-314C text27 CODE >27:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-3154 text27 CODE >28:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F14 text26 CODE >14:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F14 text26 CODE >15:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F26 text26 CODE >16:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F2C text26 CODE >17:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F32 text26 CODE >18:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F38 text26 CODE >19:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F3E text26 CODE >20:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F44 text26 CODE >21:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F4A text26 CODE >22:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-2F5C text26 CODE >23:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-306C text25 CODE >620:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-3070 text25 CODE >622:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-307A text25 CODE >623:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-307C text25 CODE >624:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-307E text25 CODE >625:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-21DE text24 CODE >411:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2D1E text29 CODE >13:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2D1E text29 CODE >16:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2D22 text29 CODE >17:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2D26 text29 CODE >18:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2D2A text29 CODE >19:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2D78 text29 CODE >20:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2D7A text29 CODE >21:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2D7C text29 CODE >22:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2BF2 text28 CODE >35:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2BF6 text28 CODE >37:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C00 text28 CODE >38:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C06 text28 CODE >39:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C0E text28 CODE >41:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C10 text28 CODE >42:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C18 text28 CODE >43:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C1A text28 CODE >44:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C22 text28 CODE >46:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C2C text28 CODE >48:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C36 text28 CODE >49:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C3C text28 CODE >50:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C44 text28 CODE >52:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C46 text28 CODE >53:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C4E text28 CODE >54:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C50 text28 CODE >55:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C58 text28 CODE >56:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+314A text27 CODE >25:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+314E text27 CODE >26:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+3150 text27 CODE >27:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+3158 text27 CODE >28:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F18 text26 CODE >14:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F18 text26 CODE >15:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F2A text26 CODE >16:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F30 text26 CODE >17:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F36 text26 CODE >18:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F3C text26 CODE >19:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F42 text26 CODE >20:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F48 text26 CODE >21:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F4E text26 CODE >22:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2F60 text26 CODE >23:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+3070 text25 CODE >621:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+3074 text25 CODE >623:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+307E text25 CODE >624:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+3080 text25 CODE >625:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+3082 text25 CODE >626:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 21DE text24 CODE >412:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-21E8 text24 CODE >416:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-21F8 text24 CODE >417:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-223E text24 CODE >418:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2284 text24 CODE >419:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-22CA text24 CODE >420:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2310 text24 CODE >421:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2356 text24 CODE >416:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-235C text24 CODE >427:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2364 text24 CODE >428:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2380 text24 CODE >429:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2388 text24 CODE >430:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-23A4 text24 CODE >431:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-23AC text24 CODE >432:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-23C8 text24 CODE >434:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-23F0 text24 CODE >435:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2418 text24 CODE >450:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-3132 text23 CODE >24:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3132 text23 CODE >26:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-318E text22 CODE >29:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-318E text22 CODE >31:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3192 text22 CODE >32:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3194 text22 CODE >33:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3186 text21 CODE >41:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3186 text21 CODE >43:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-318A text21 CODE >44:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-318C text21 CODE >45:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-317C text20 CODE >47:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-317C text20 CODE >49:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3180 text20 CODE >50:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3184 text20 CODE >51:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2CB8 text19 CODE >400:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2CB8 text19 CODE >401:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+21DE text24 CODE >413:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+21E8 text24 CODE >417:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+21F8 text24 CODE >418:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+223E text24 CODE >419:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2284 text24 CODE >420:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+22CA text24 CODE >421:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2310 text24 CODE >422:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2356 text24 CODE >417:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+235C text24 CODE >428:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2364 text24 CODE >429:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2380 text24 CODE >430:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2388 text24 CODE >431:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+23A4 text24 CODE >432:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+23AC text24 CODE >433:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+23C8 text24 CODE >435:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+23F0 text24 CODE >436:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2418 text24 CODE >451:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+3136 text23 CODE >24:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3136 text23 CODE >26:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3192 text22 CODE >29:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3192 text22 CODE >31:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3196 text22 CODE >32:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3198 text22 CODE >33:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+318A text21 CODE >41:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+318A text21 CODE >43:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+318E text21 CODE >44:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3190 text21 CODE >45:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3180 text20 CODE >47:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3180 text20 CODE >49:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3184 text20 CODE >50:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3188 text20 CODE >51:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2CBC text19 CODE >401:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2CBC text19 CODE >402:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2CCA text19 CODE >403:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2CD8 text19 CODE >404:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2CE8 text19 CODE >405:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2D0E text19 CODE >404:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2D14 text19 CODE >407:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2D18 text19 CODE >410:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-303E text18 CODE >53:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3042 text18 CODE >56:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3046 text18 CODE >57:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3048 text18 CODE >58:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-304C text18 CODE >59:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3050 text18 CODE >60:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3054 text18 CODE >61:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3064 text18 CODE >62:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-3066 text18 CODE >63:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-2FA0 text17 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-2FA0 text17 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-2FB0 text17 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-2FBE text17 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-2FCC text17 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-2586 text16 CODE >164:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2586 text16 CODE >167:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-258A text16 CODE >168:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2598 text16 CODE >169:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-25A6 text16 CODE >170:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-25AA text16 CODE >173:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-25AE text16 CODE >174:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-25BC text16 CODE >175:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-25CC text16 CODE >176:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-25E6 text16 CODE >177:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2654 text16 CODE >175:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-265A text16 CODE >179:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-26E2 text16 CODE >180:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-26EC text16 CODE >181:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-26F0 text16 CODE >182:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2CC0 text19 CODE >403:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2CCE text19 CODE >404:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2CDC text19 CODE >405:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2CEC text19 CODE >406:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2D12 text19 CODE >405:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2D18 text19 CODE >408:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2D1C text19 CODE >411:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+3042 text18 CODE >53:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3046 text18 CODE >56:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+304A text18 CODE >57:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+304C text18 CODE >58:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3050 text18 CODE >59:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3054 text18 CODE >60:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3058 text18 CODE >61:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+3068 text18 CODE >62:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+306A text18 CODE >63:C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+2FA4 text17 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+2FA4 text17 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+2FB4 text17 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+2FC2 text17 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+2FD0 text17 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+2586 text16 CODE >165:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2586 text16 CODE >168:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+258A text16 CODE >169:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2598 text16 CODE >170:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+25A6 text16 CODE >171:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+25AA text16 CODE >174:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+25AE text16 CODE >175:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+25BC text16 CODE >176:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+25CC text16 CODE >177:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+25E6 text16 CODE >178:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2654 text16 CODE >176:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+265A text16 CODE >180:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+26E2 text16 CODE >181:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+26EC text16 CODE >182:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+26F0 text16 CODE >183:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 27F0 text15 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
 27F0 text15 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
 27F6 text15 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
@@ -565,26 +565,26 @@ F9A text33 CODE >1430:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\
 2B0C text13 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
 2B0C text13 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
 2B14 text13 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwdiv.c
-2C56 text12 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2C56 text12 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2C62 text12 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2C68 text12 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2C6A text12 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2C72 text12 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2C76 text12 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2C7C text12 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2C90 text12 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2CA0 text12 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2CA8 text12 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2CAE text12 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2CAE text12 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-2CB6 text12 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
-3098 text11 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
-309C text11 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
-3106 text10 CODE >30:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-3110 text10 CODE >31:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-3112 text10 CODE >32:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
-311A text10 CODE >33:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+2C5A text12 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2C5A text12 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2C66 text12 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2C6C text12 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2C6E text12 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2C76 text12 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2C7A text12 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2C80 text12 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2C94 text12 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2CA4 text12 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2CAC text12 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2CB2 text12 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2CB2 text12 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+2CBA text12 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\lwmod.c
+309C text11 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
+30A0 text11 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\isdigit.c
+310A text10 CODE >30:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+3114 text10 CODE >31:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+3116 text10 CODE >32:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
+311E text10 CODE >33:C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
 12 text9 CODE >458:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
 12 text9 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
 16 text9 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
@@ -667,116 +667,116 @@ DC text9 CODE >597:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\dop
 938 text9 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
 944 text9 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
 98A text9 CODE >1540:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\doprnt.c
-2E26 text8 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
-2E26 text8 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
-2E2E text8 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
-2E3A text8 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
-2E46 text8 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
-2E6A text8 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
-17BA text7 CODE >251:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-17BA text7 CODE >255:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-17C4 text7 CODE >256:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-17C6 text7 CODE >259:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-17D0 text7 CODE >260:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-17DC text7 CODE >261:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-17E6 text7 CODE >264:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-17F0 text7 CODE >265:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-17FC text7 CODE >266:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1806 text7 CODE >270:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1810 text7 CODE >271:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-181C text7 CODE >272:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1828 text7 CODE >273:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1832 text7 CODE >274:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1834 text7 CODE >276:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-183E text7 CODE >277:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-184A text7 CODE >278:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1856 text7 CODE >279:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1858 text7 CODE >256:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1872 text7 CODE >280:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-187E text7 CODE >281:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-18A6 text7 CODE >282:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1950 text7 CODE >283:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-19D0 text7 CODE >284:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-19D2 text7 CODE >286:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1A66 text7 CODE >287:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1B10 text7 CODE >289:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1B12 text7 CODE >291:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1BBC text7 CODE >292:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-241A text6 CODE >183:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2E2A text8 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
+2E2A text8 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
+2E32 text8 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
+2E3E text8 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
+2E4A text8 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
+2E6E text8 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
+17BA text7 CODE >252:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+17BA text7 CODE >256:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+17C4 text7 CODE >257:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+17C6 text7 CODE >260:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+17D0 text7 CODE >261:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+17DC text7 CODE >262:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+17E6 text7 CODE >265:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+17F0 text7 CODE >266:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+17FC text7 CODE >267:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1806 text7 CODE >271:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1810 text7 CODE >272:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+181C text7 CODE >273:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1828 text7 CODE >274:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1832 text7 CODE >275:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1834 text7 CODE >277:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+183E text7 CODE >278:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+184A text7 CODE >279:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1856 text7 CODE >280:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1858 text7 CODE >257:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1872 text7 CODE >281:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+187E text7 CODE >282:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+18A6 text7 CODE >283:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1950 text7 CODE >284:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+19D0 text7 CODE >285:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+19D2 text7 CODE >287:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1A66 text7 CODE >288:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1B10 text7 CODE >290:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1B12 text7 CODE >292:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1BBC text7 CODE >293:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 241A text6 CODE >184:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-241C text6 CODE >187:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2450 text6 CODE >188:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2484 text6 CODE >189:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2486 text6 CODE >194:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-248A text6 CODE >195:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-248C text6 CODE >197:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-24F4 text6 CODE >198:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2520 text6 CODE >199:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2522 text6 CODE >201:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-253E text6 CODE >202:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-255A text6 CODE >205:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-255C text6 CODE >184:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2ECA text5 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-2ECA text5 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-2ED6 text5 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-2EE2 text5 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-2EEE text5 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
-2D7A text4 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
-2D7A text4 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
-2D7C text4 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
-2D82 text4 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
-2D88 text4 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
-2DC0 text4 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
-300C text3 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
-300C text3 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
-3014 text3 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
-3016 text3 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
-301C text3 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
-3022 text3 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
-26F2 text2 CODE >143:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+241A text6 CODE >185:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+241C text6 CODE >188:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2450 text6 CODE >189:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2484 text6 CODE >190:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2486 text6 CODE >195:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+248A text6 CODE >196:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+248C text6 CODE >198:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+24F4 text6 CODE >199:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2520 text6 CODE >200:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2522 text6 CODE >202:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+253E text6 CODE >203:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+255A text6 CODE >206:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+255C text6 CODE >185:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2ECE text5 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+2ECE text5 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+2EDA text5 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+2EE6 text5 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+2EF2 text5 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
+2D7E text4 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
+2D7E text4 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
+2D80 text4 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
+2D86 text4 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
+2D8C text4 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
+2DC4 text4 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcmp.c
+3010 text3 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
+3010 text3 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
+3018 text3 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
+301A text3 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
+3020 text3 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
+3026 text3 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
 26F2 text2 CODE >144:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-26FC text2 CODE >147:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2724 text2 CODE >148:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2740 text2 CODE >149:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-274A text2 CODE >151:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2772 text2 CODE >152:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-278E text2 CODE >153:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2798 text2 CODE >155:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-27A4 text2 CODE >156:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-27BC text2 CODE >157:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-27C2 text2 CODE >158:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-27D2 text2 CODE >159:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-27D8 text2 CODE >160:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-27E8 text2 CODE >161:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1F24 text1 CODE >207:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+26F2 text2 CODE >145:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+26FC text2 CODE >148:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2724 text2 CODE >149:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2740 text2 CODE >150:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+274A text2 CODE >152:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2772 text2 CODE >153:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+278E text2 CODE >154:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2798 text2 CODE >156:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+27A4 text2 CODE >157:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+27BC text2 CODE >158:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+27C2 text2 CODE >159:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+27D2 text2 CODE >160:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+27D8 text2 CODE >161:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+27E8 text2 CODE >162:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 1F24 text1 CODE >208:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1F4C text1 CODE >210:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1F6C text1 CODE >211:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1FA0 text1 CODE >210:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1FA8 text1 CODE >213:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-1FE8 text1 CODE >214:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2006 text1 CODE >215:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2026 text1 CODE >216:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-202C text1 CODE >218:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2040 text1 CODE >219:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2048 text1 CODE >220:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-206C text1 CODE >221:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-20C4 text1 CODE >222:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-20F0 text1 CODE >223:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-211C text1 CODE >225:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2150 text1 CODE >226:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2156 text1 CODE >228:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-215A text1 CODE >236:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2178 text1 CODE >238:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2182 text1 CODE >239:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-218C text1 CODE >240:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2196 text1 CODE >242:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-21A0 text1 CODE >243:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-21AA text1 CODE >244:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-21B4 text1 CODE >245:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-21BE text1 CODE >246:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-21C8 text1 CODE >247:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-21D2 text1 CODE >248:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1F24 text1 CODE >209:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1F4C text1 CODE >211:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1F6C text1 CODE >212:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1FA0 text1 CODE >211:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1FA8 text1 CODE >214:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+1FE8 text1 CODE >215:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2006 text1 CODE >216:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2026 text1 CODE >217:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+202C text1 CODE >219:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2040 text1 CODE >220:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2048 text1 CODE >221:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+206C text1 CODE >222:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+20C4 text1 CODE >223:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+20F0 text1 CODE >224:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+211C text1 CODE >226:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2150 text1 CODE >227:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2156 text1 CODE >229:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+215A text1 CODE >237:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2178 text1 CODE >239:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2182 text1 CODE >240:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+218C text1 CODE >241:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2196 text1 CODE >243:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+21A0 text1 CODE >244:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+21AA text1 CODE >245:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+21B4 text1 CODE >246:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+21BE text1 CODE >247:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+21C8 text1 CODE >248:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+21D2 text1 CODE >249:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2B86 text0 CODE >101:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2B86 text0 CODE >108:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2B8A text0 CODE >109:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
@@ -785,92 +785,93 @@ DC text9 CODE >597:C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\dop
 2B94 text0 CODE >112:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2B98 text0 CODE >113:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2B9C text0 CODE >114:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2B9E text0 CODE >115:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BA0 text0 CODE >115:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2BA2 text0 CODE >116:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2BA4 text0 CODE >117:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2BA6 text0 CODE >118:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2BBC text0 CODE >120:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2BBE text0 CODE >121:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2BC2 text0 CODE >123:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2BC4 text0 CODE >124:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BA6 text0 CODE >117:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BA8 text0 CODE >118:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BAA text0 CODE >119:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BC0 text0 CODE >121:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BC2 text0 CODE >122:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BC6 text0 CODE >124:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2BC8 text0 CODE >125:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2BCC text0 CODE >126:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2BD0 text0 CODE >127:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2BD4 text0 CODE >128:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 2BD8 text0 CODE >129:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2BDA text0 CODE >130:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2BEA text0 CODE >131:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2BEC text0 CODE >122:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-2A0C cinit CODE >2280:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A0C cinit CODE >2282:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A0C cinit CODE >2285:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A0C cinit CODE >2515:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A0E cinit CODE >2516:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A10 cinit CODE >2517:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A12 cinit CODE >2518:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A14 cinit CODE >2519:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A16 cinit CODE >2520:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A18 cinit CODE >2521:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A1C cinit CODE >2522:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A20 cinit CODE >2523:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A20 cinit CODE >2524:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A22 cinit CODE >2525:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A26 cinit CODE >2526:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A28 cinit CODE >2527:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A2A cinit CODE >2528:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A2C cinit CODE >2529:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A2E cinit CODE >2530:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A30 cinit CODE >2534:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A32 cinit CODE >2535:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A34 cinit CODE >2536:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A36 cinit CODE >2537:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A38 cinit CODE >2538:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A3A cinit CODE >2539:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A3C cinit CODE >2540:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A40 cinit CODE >2541:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A44 cinit CODE >2542:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A44 cinit CODE >2543:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A46 cinit CODE >2544:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A4A cinit CODE >2545:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A4C cinit CODE >2546:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A4E cinit CODE >2547:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A50 cinit CODE >2551:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A52 cinit CODE >2552:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A54 cinit CODE >2553:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A56 cinit CODE >2554:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A58 cinit CODE >2555:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A5A cinit CODE >2556:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A5C cinit CODE >2557:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A60 cinit CODE >2558:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A64 cinit CODE >2559:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A64 cinit CODE >2560:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A66 cinit CODE >2561:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A6A cinit CODE >2562:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A6C cinit CODE >2563:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A6E cinit CODE >2564:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A70 cinit CODE >2568:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A74 cinit CODE >2569:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A76 cinit CODE >2570:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A76 cinit CODE >2571:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A78 cinit CODE >2572:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A7A cinit CODE >2573:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A7C cinit CODE >2576:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A80 cinit CODE >2577:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A82 cinit CODE >2578:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A82 cinit CODE >2579:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A84 cinit CODE >2580:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A86 cinit CODE >2581:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A88 cinit CODE >2584:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A8C cinit CODE >2585:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A8E cinit CODE >2586:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A8E cinit CODE >2587:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A90 cinit CODE >2588:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A92 cinit CODE >2589:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A94 cinit CODE >2595:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A94 cinit CODE >2597:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A96 cinit CODE >2598:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A98 cinit CODE >2599:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
-2A9A cinit CODE >2600:C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.
+2BDC text0 CODE >130:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BDE text0 CODE >131:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BEE text0 CODE >132:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2BF0 text0 CODE >123:C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+2A0C cinit CODE >2282:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A0C cinit CODE >2284:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A0C cinit CODE >2287:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A0C cinit CODE >2517:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A0E cinit CODE >2518:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A10 cinit CODE >2519:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A12 cinit CODE >2520:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A14 cinit CODE >2521:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A16 cinit CODE >2522:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A18 cinit CODE >2523:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A1C cinit CODE >2524:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A20 cinit CODE >2525:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A20 cinit CODE >2526:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A22 cinit CODE >2527:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A26 cinit CODE >2528:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A28 cinit CODE >2529:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A2A cinit CODE >2530:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A2C cinit CODE >2531:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A2E cinit CODE >2532:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A30 cinit CODE >2536:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A32 cinit CODE >2537:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A34 cinit CODE >2538:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A36 cinit CODE >2539:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A38 cinit CODE >2540:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A3A cinit CODE >2541:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A3C cinit CODE >2542:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A40 cinit CODE >2543:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A44 cinit CODE >2544:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A44 cinit CODE >2545:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A46 cinit CODE >2546:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A4A cinit CODE >2547:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A4C cinit CODE >2548:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A4E cinit CODE >2549:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A50 cinit CODE >2553:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A52 cinit CODE >2554:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A54 cinit CODE >2555:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A56 cinit CODE >2556:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A58 cinit CODE >2557:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A5A cinit CODE >2558:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A5C cinit CODE >2559:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A60 cinit CODE >2560:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A64 cinit CODE >2561:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A64 cinit CODE >2562:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A66 cinit CODE >2563:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A6A cinit CODE >2564:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A6C cinit CODE >2565:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A6E cinit CODE >2566:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A70 cinit CODE >2570:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A74 cinit CODE >2571:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A76 cinit CODE >2572:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A76 cinit CODE >2573:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A78 cinit CODE >2574:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A7A cinit CODE >2575:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A7C cinit CODE >2578:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A80 cinit CODE >2579:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A82 cinit CODE >2580:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A82 cinit CODE >2581:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A84 cinit CODE >2582:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A86 cinit CODE >2583:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A88 cinit CODE >2586:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A8C cinit CODE >2587:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A8E cinit CODE >2588:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A8E cinit CODE >2589:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A90 cinit CODE >2590:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A92 cinit CODE >2591:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A94 cinit CODE >2597:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A94 cinit CODE >2599:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A96 cinit CODE >2600:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A98 cinit CODE >2601:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
+2A9A cinit CODE >2602:C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -895,11 +896,11 @@ __Hspace_2 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __size_of_lcdInst 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\AER201.production.obj
-__end_of_readADC 3098 0 CODE 0 text25 dist/default/production\AER201.production.obj
-_lcdNibble 2BEE 0 CODE 0 text28 dist/default/production\AER201.production.obj
+__end_of_readADC 309C 0 CODE 0 text25 dist/default/production\AER201.production.obj
+_lcdNibble 2BF2 0 CODE 0 text28 dist/default/production\AER201.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\AER201.production.obj
 _IR_THRESHOLD_LOW 70 0 COMRAM 1 dataCOMRAM dist/default/production\AER201.production.obj
-__mediumconst FED4 0 MEDIUMCONST 0 mediumconst C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
+__mediumconst FED4 0 MEDIUMCONST 0 mediumconst C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
 _DIST1_TRIG 76 0 COMRAM 1 dataCOMRAM dist/default/production\AER201.production.obj
 I2C_Master_Init@c 8D 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\AER201.production.obj
@@ -912,13 +913,13 @@ _LATC F8B 0 ABS 0 - dist/default/production\AER201.production.obj
 _LATD F8C 0 ABS 0 - dist/default/production\AER201.production.obj
 _RCEN 7E2B 0 ABS 0 - dist/default/production\AER201.production.obj
 _RSEN 7E29 0 ABS 0 - dist/default/production\AER201.production.obj
-___sp 0 0 STACK 2 stack C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
+___sp 0 0 STACK 2 stack C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
 _keys FED5 0 MEDIUMCONST 0 mediumconst dist/default/production\AER201.production.obj
 _main 2B86 0 CODE 0 text0 dist/default/production\AER201.production.obj
 _menu 178 0 BIGRAM 1 dataBIGRAM dist/default/production\AER201.production.obj
 _time CE 0 BANK0 1 bssBANK0 dist/default/production\AER201.production.obj
 btemp 77 0 COMRAM 1 temp dist/default/production\AER201.production.obj
-start E 0 CODE 0 init C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
+start E 0 CODE 0 init C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
 i2___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __size_of___awmod 0 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -944,11 +945,11 @@ ___awmod@sign 85 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production
 I2C_Master_Read@a 81 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __size_of__doprnt 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\AER201.production.obj
-__accesstop 80 0 ABS 0 - C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
-intlevel0 0 0 CODE 0 text C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
-intlevel1 0 0 CODE 0 text C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
-intlevel2 0 0 CODE 0 text C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
-intlevel3 0 0 CODE 0 text C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
+__accesstop 80 0 ABS 0 - C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
+intlevel0 0 0 CODE 0 text C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
+intlevel1 0 0 CODE 0 text C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
+intlevel2 0 0 CODE 0 text C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
+intlevel3 0 0 CODE 0 text C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\AER201.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\AER201.production.obj
 __CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -964,7 +965,7 @@ _update_display 241A 0 CODE 0 text6 dist/default/production\AER201.production.ob
 ___awdiv@sign 85 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\AER201.production.obj
 _menuSize F8 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
-__pidataCOMRAM 3156 0 CODE 0 idataCOMRAM dist/default/production\AER201.production.obj
+__pidataCOMRAM 315A 0 CODE 0 idataCOMRAM dist/default/production\AER201.production.obj
 _logIndex F4 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
 ___wmul@multiplicand 82 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 i2printf@ap 25 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
@@ -977,10 +978,10 @@ _ADRESH FC4 0 ABS 0 - dist/default/production\AER201.production.obj
 _ADRESL FC3 0 ABS 0 - dist/default/production\AER201.production.obj
 i2___wmul@multiplier 1 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 __LdataBIGRAM 0 0 ABS 0 dataBIGRAM dist/default/production\AER201.production.obj
-__end_of_lcdInst 3156 0 CODE 0 text27 dist/default/production\AER201.production.obj
+__end_of_lcdInst 315A 0 CODE 0 text27 dist/default/production\AER201.production.obj
 ___awdiv@dividend 80 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
 __size_ofi2___wmul 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __size_of_update_RTC 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __size_of_update_lcd 0 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -990,7 +991,7 @@ i2___lwmod@divisor A 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.prod
 __doprnt@flag 9E 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __doprnt@prec 97 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\AER201.production.obj
-__end_of___wmul 2FD6 0 CODE 0 text17 dist/default/production\AER201.production.obj
+__end_of___wmul 2FDA 0 CODE 0 text17 dist/default/production\AER201.production.obj
 i2__doprnt@ap 11 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 i2__doprnt@cp 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 i2__doprnt@pb D 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
@@ -1006,7 +1007,7 @@ __end_of___awdiv 28AE 0 CODE 0 text15 dist/default/production\AER201.production.
 __end_of___awmod 2A0C 0 CODE 0 text14 dist/default/production\AER201.production.obj
 __end_of___lldiv 296A 0 CODE 0 text30 dist/default/production\AER201.production.obj
 __end_of___lwdiv 2B16 0 CODE 0 text13 dist/default/production\AER201.production.obj
-__end_of___lwmod 2CB8 0 CODE 0 text12 dist/default/production\AER201.production.obj
+__end_of___lwmod 2CBC 0 CODE 0 text12 dist/default/production\AER201.production.obj
 __size_of_isdigit 0 0 ABS 0 - dist/default/production\AER201.production.obj
 _yopNoCap DF 0 BANK0 1 bssBANK0 dist/default/production\AER201.production.obj
 i2putch@data 3 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
@@ -1023,7 +1024,7 @@ __LidataBIGRAM 0 0 ABS 0 idataBIGRAM dist/default/production\AER201.production.o
 ?i2___lwdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 ?i2___lwmod 8 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 __end_of_update_display 2586 0 CODE 0 text6 dist/default/production\AER201.production.obj
-i2_lcdNibble 2DD0 0 CODE 0 text40 dist/default/production\AER201.production.obj
+i2_lcdNibble 2DD4 0 CODE 0 text40 dist/default/production\AER201.production.obj
 ___lwdiv@quotient 85 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\AER201.production.obj
 __size_of_putch 0 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -1035,17 +1036,17 @@ __Lintcodelo E 0 CODE 0 intcodelo dist/default/production\AER201.production.obj
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 start_initialization 2A0C 0 CODE 0 cinit dist/default/production\AER201.production.obj
 update_lcd@flag AB 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
-i2_putch 3164 0 CODE 0 text34 dist/default/production\AER201.production.obj
+i2_putch 3168 0 CODE 0 text34 dist/default/production\AER201.production.obj
 __CFG_PBADEN$ON 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __end_of_hexpowers FEF8 0 MEDIUMCONST 0 mediumconst dist/default/production\AER201.production.obj
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\AER201.production.obj
-i2___wmul 30C2 0 CODE 0 text36 dist/default/production\AER201.production.obj
+i2___wmul 30C6 0 CODE 0 text36 dist/default/production\AER201.production.obj
 _startTime 10E 0 BANK1 1 bssBANK1 dist/default/production\AER201.production.obj
 ?i2__doprnt D 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 ___lldiv@dividend 80 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 ___rparam_used 1 0 ABS 0 - dist/default/production\AER201.production.obj
 __CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\AER201.production.obj
-__end_ofi2___wmul 30E8 0 CODE 0 text36 dist/default/production\AER201.production.obj
+__end_ofi2___wmul 30EC 0 CODE 0 text36 dist/default/production\AER201.production.obj
 _PROX1_PIN E4 0 BANK0 1 bssBANK0 dist/default/production\AER201.production.obj
 _PROX2_PIN E7 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
 __pcstackBANK0 80 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
@@ -1059,13 +1060,13 @@ _TRISC4 7CA4 0 ABS 0 - dist/default/production\AER201.production.obj
 i2isdigit@c 3 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 i2___lwdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 _hexpowers FEF0 0 MEDIUMCONST 0 mediumconst dist/default/production\AER201.production.obj
-__end_of_printf 2F14 0 CODE 0 text5 dist/default/production\AER201.production.obj
+__end_of_printf 2F18 0 CODE 0 text5 dist/default/production\AER201.production.obj
 display_menu@menuSizePtr 170 0 BANK1 1 cstackBANK1 dist/default/production\AER201.production.obj
-_readADC 306C 0 CODE 0 text25 dist/default/production\AER201.production.obj
+_readADC 3070 0 CODE 0 text25 dist/default/production\AER201.production.obj
 _release 74 0 COMRAM 1 dataCOMRAM dist/default/production\AER201.production.obj
-_isdigit$713 81 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
+_isdigit$714 81 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 _endIndex EE 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
-__end_of_initLCD 2F5E 0 CODE 0 text26 dist/default/production\AER201.production.obj
+__end_of_initLCD 2F62 0 CODE 0 text26 dist/default/production\AER201.production.obj
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\AER201.production.obj
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\AER201.production.obj
 __Hbank2 0 0 ABS 0 bank2 dist/default/production\AER201.production.obj
@@ -1078,8 +1079,8 @@ __Hbank8 0 0 ABS 0 bank8 dist/default/production\AER201.production.obj
 __Hbank9 0 0 ABS 0 bank9 dist/default/production\AER201.production.obj
 __Hcinit 0 0 ABS 0 cinit dist/default/production\AER201.production.obj
 __Hconst 0 0 CONST 0 const dist/default/production\AER201.production.obj
-__end_of_strcmp 2DD0 0 CODE 0 text4 dist/default/production\AER201.production.obj
-__end_of_strcpy 303E 0 CODE 0 text3 dist/default/production\AER201.production.obj
+__end_of_strcmp 2DD4 0 CODE 0 text4 dist/default/production\AER201.production.obj
+__end_of_strcpy 3042 0 CODE 0 text3 dist/default/production\AER201.production.obj
 __Hidata 0 0 CODE 0 idata dist/default/production\AER201.production.obj
 __Hidloc 200008 0 IDLOC 0 idloc dist/default/production\AER201.production.obj
 __Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\AER201.production.obj
@@ -1106,8 +1107,8 @@ __Hbank14 0 0 ABS 0 bank14 dist/default/production\AER201.production.obj
 __Hbank15 0 0 ABS 0 bank15 dist/default/production\AER201.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\AER201.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\AER201.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
-__end_of_sprintf 2E78 0 CODE 0 text8 dist/default/production\AER201.production.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
+__end_of_sprintf 2E7C 0 CODE 0 text8 dist/default/production\AER201.production.obj
 _measure_counter 66 0 COMRAM 1 bssCOMRAM dist/default/production\AER201.production.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\AER201.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\AER201.production.obj
@@ -1122,7 +1123,7 @@ __Lbank6 0 0 ABS 0 bank6 dist/default/production\AER201.production.obj
 __Lbank7 0 0 ABS 0 bank7 dist/default/production\AER201.production.obj
 __Lbank8 0 0 ABS 0 bank8 dist/default/production\AER201.production.obj
 __Lbank9 0 0 ABS 0 bank9 dist/default/production\AER201.production.obj
-__end_of_isdigit 30C2 0 CODE 0 text11 dist/default/production\AER201.production.obj
+__end_of_isdigit 30C6 0 CODE 0 text11 dist/default/production\AER201.production.obj
 __Lcinit 0 0 ABS 0 cinit dist/default/production\AER201.production.obj
 __Lconst 0 0 CONST 0 const dist/default/production\AER201.production.obj
 __Lidata 0 0 CODE 0 idata dist/default/production\AER201.production.obj
@@ -1162,14 +1163,14 @@ __Ltemp 77 0 COMRAM 1 temp dist/default/production\AER201.production.obj
 __Ltext 0 0 ABS 0 text dist/default/production\AER201.production.obj
 __CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 _keypressed 8 0 CODE 0 intcode dist/default/production\AER201.production.obj
-___wmul 2FA0 0 CODE 0 text17 dist/default/production\AER201.production.obj
+___wmul 2FA4 0 CODE 0 text17 dist/default/production\AER201.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\AER201.production.obj
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\AER201.production.obj
 int$flags 77 0 COMRAM 1 temp dist/default/production\AER201.production.obj
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\AER201.production.obj
 __Hintret 0 0 ABS 0 intret dist/default/production\AER201.production.obj
 __Hirdata 0 0 CODE 0 irdata dist/default/production\AER201.production.obj
-i2_printf 2FD6 0 CODE 0 text32 dist/default/production\AER201.production.obj
+i2_printf 2FDA 0 CODE 0 text32 dist/default/production\AER201.production.obj
 _IR1 C4 0 BANK0 1 bssBANK0 dist/default/production\AER201.production.obj
 _IR2 11C 0 BANK1 1 bssBANK1 dist/default/production\AER201.production.obj
 _PEN 7E2A 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -1177,13 +1178,13 @@ _SEN 7E28 0 ABS 0 - dist/default/production\AER201.production.obj
 __S0 30000E 0 ABS 0 - dist/default/production\AER201.production.obj
 __S1 448 0 ABS 0 - dist/default/production\AER201.production.obj
 __S2 0 0 ABS 0 - dist/default/production\AER201.production.obj
-__end_ofi2_printf 300C 0 CODE 0 text32 dist/default/production\AER201.production.obj
+__end_ofi2_printf 3010 0 CODE 0 text32 dist/default/production\AER201.production.obj
 _IR_THRESHOLD_HI 6E 0 COMRAM 1 dataCOMRAM dist/default/production\AER201.production.obj
 __HidataBIGRAM 0 0 ABS 0 idataBIGRAM dist/default/production\AER201.production.obj
 i2___lwdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
-_I2C_Master_Start 318E 0 CODE 0 text22 dist/default/production\AER201.production.obj
+_I2C_Master_Start 3192 0 CODE 0 text22 dist/default/production\AER201.production.obj
 __HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\AER201.production.obj
-_I2C_Master_Write 317C 0 CODE 0 text20 dist/default/production\AER201.production.obj
+_I2C_Master_Write 3180 0 CODE 0 text20 dist/default/production\AER201.production.obj
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\AER201.production.obj
 _read_sensors 21DE 0 CODE 0 text24 dist/default/production\AER201.production.obj
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\AER201.production.obj
@@ -1203,7 +1204,7 @@ ___lldiv@divisor 84 0 BANK0 1 cstackBANK0 dist/default/production\AER201.product
 _endSize F0 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
 i2___awmod@counter 5 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 strcmp@r 85 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
-_lcdInst 3146 0 CODE 0 text27 dist/default/production\AER201.production.obj
+_lcdInst 314A 0 CODE 0 text27 dist/default/production\AER201.production.obj
 __Hramtop 1000 0 RAM 0 ramtop dist/default/production\AER201.production.obj
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\AER201.production.obj
 __pdataBANK0 E5 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
@@ -1256,46 +1257,46 @@ lcdNibble@data 81 0 BANK0 1 cstackBANK0 dist/default/production\AER201.productio
 lcdNibble@temp 80 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __end_of_keypressed 17BA 0 CODE 0 intcode_body dist/default/production\AER201.production.obj
 __end_of_display_menu 1C54 0 CODE 0 text7 dist/default/production\AER201.production.obj
-__ptext10 3106 0 CODE 0 text10 dist/default/production\AER201.production.obj
-__ptext11 3098 0 CODE 0 text11 dist/default/production\AER201.production.obj
-__ptext12 2C56 0 CODE 0 text12 dist/default/production\AER201.production.obj
+__ptext10 310A 0 CODE 0 text10 dist/default/production\AER201.production.obj
+__ptext11 309C 0 CODE 0 text11 dist/default/production\AER201.production.obj
+__ptext12 2C5A 0 CODE 0 text12 dist/default/production\AER201.production.obj
 __ptext13 2A9E 0 CODE 0 text13 dist/default/production\AER201.production.obj
 __ptext14 296A 0 CODE 0 text14 dist/default/production\AER201.production.obj
 __ptext15 27F0 0 CODE 0 text15 dist/default/production\AER201.production.obj
 __ptext16 2586 0 CODE 0 text16 dist/default/production\AER201.production.obj
-__ptext17 2FA0 0 CODE 0 text17 dist/default/production\AER201.production.obj
-__ptext18 303E 0 CODE 0 text18 dist/default/production\AER201.production.obj
-__ptext19 2CB8 0 CODE 0 text19 dist/default/production\AER201.production.obj
-__ptext20 317C 0 CODE 0 text20 dist/default/production\AER201.production.obj
-__ptext21 3186 0 CODE 0 text21 dist/default/production\AER201.production.obj
-__ptext22 318E 0 CODE 0 text22 dist/default/production\AER201.production.obj
-__ptext23 3132 0 CODE 0 text23 dist/default/production\AER201.production.obj
+__ptext17 2FA4 0 CODE 0 text17 dist/default/production\AER201.production.obj
+__ptext18 3042 0 CODE 0 text18 dist/default/production\AER201.production.obj
+__ptext19 2CBC 0 CODE 0 text19 dist/default/production\AER201.production.obj
+__ptext20 3180 0 CODE 0 text20 dist/default/production\AER201.production.obj
+__ptext21 318A 0 CODE 0 text21 dist/default/production\AER201.production.obj
+__ptext22 3192 0 CODE 0 text22 dist/default/production\AER201.production.obj
+__ptext23 3136 0 CODE 0 text23 dist/default/production\AER201.production.obj
 __ptext24 21DE 0 CODE 0 text24 dist/default/production\AER201.production.obj
-__ptext25 306C 0 CODE 0 text25 dist/default/production\AER201.production.obj
-__ptext26 2F14 0 CODE 0 text26 dist/default/production\AER201.production.obj
-__ptext27 3146 0 CODE 0 text27 dist/default/production\AER201.production.obj
-__ptext28 2BEE 0 CODE 0 text28 dist/default/production\AER201.production.obj
-__ptext29 2D1A 0 CODE 0 text29 dist/default/production\AER201.production.obj
+__ptext25 3070 0 CODE 0 text25 dist/default/production\AER201.production.obj
+__ptext26 2F18 0 CODE 0 text26 dist/default/production\AER201.production.obj
+__ptext27 314A 0 CODE 0 text27 dist/default/production\AER201.production.obj
+__ptext28 2BF2 0 CODE 0 text28 dist/default/production\AER201.production.obj
+__ptext29 2D1E 0 CODE 0 text29 dist/default/production\AER201.production.obj
 __ptext30 28AE 0 CODE 0 text30 dist/default/production\AER201.production.obj
-__ptext32 2FD6 0 CODE 0 text32 dist/default/production\AER201.production.obj
+__ptext32 2FDA 0 CODE 0 text32 dist/default/production\AER201.production.obj
 __ptext33 996 0 CODE 0 text33 dist/default/production\AER201.production.obj
-__ptext34 3164 0 CODE 0 text34 dist/default/production\AER201.production.obj
-__ptext35 30E8 0 CODE 0 text35 dist/default/production\AER201.production.obj
-__ptext36 30C2 0 CODE 0 text36 dist/default/production\AER201.production.obj
-__ptext37 2F5E 0 CODE 0 text37 dist/default/production\AER201.production.obj
-__ptext38 2E78 0 CODE 0 text38 dist/default/production\AER201.production.obj
-__ptext39 3170 0 CODE 0 text39 dist/default/production\AER201.production.obj
-__ptext40 2DD0 0 CODE 0 text40 dist/default/production\AER201.production.obj
+__ptext34 3168 0 CODE 0 text34 dist/default/production\AER201.production.obj
+__ptext35 30EC 0 CODE 0 text35 dist/default/production\AER201.production.obj
+__ptext36 30C6 0 CODE 0 text36 dist/default/production\AER201.production.obj
+__ptext37 2F62 0 CODE 0 text37 dist/default/production\AER201.production.obj
+__ptext38 2E7C 0 CODE 0 text38 dist/default/production\AER201.production.obj
+__ptext39 3174 0 CODE 0 text39 dist/default/production\AER201.production.obj
+__ptext40 2DD4 0 CODE 0 text40 dist/default/production\AER201.production.obj
 __ptext41 2B16 0 CODE 0 text41 dist/default/production\AER201.production.obj
 __ptext42 0 0 CODE 0 text42 dist/default/production\AER201.production.obj
-_putch$intlevel0 310C 0 CODE 0 text10 dist/default/production\AER201.production.obj
+_putch$intlevel0 3110 0 CODE 0 text10 dist/default/production\AER201.production.obj
 _nstate E8 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
 ___awdiv 27F0 0 CODE 0 text15 dist/default/production\AER201.production.obj
 ___awmod 296A 0 CODE 0 text14 dist/default/production\AER201.production.obj
 __pintcode_body 11EE 0 CODE 0 intcode_body dist/default/production\AER201.production.obj
 ___lldiv 28AE 0 CODE 0 text30 dist/default/production\AER201.production.obj
 ___lwdiv 2A9E 0 CODE 0 text13 dist/default/production\AER201.production.obj
-___lwmod 2C56 0 CODE 0 text12 dist/default/production\AER201.production.obj
+___lwmod 2C5A 0 CODE 0 text12 dist/default/production\AER201.production.obj
 __Lbank10 0 0 ABS 0 bank10 dist/default/production\AER201.production.obj
 __Lbank11 0 0 ABS 0 bank11 dist/default/production\AER201.production.obj
 __Lbank12 0 0 ABS 0 bank12 dist/default/production\AER201.production.obj
@@ -1310,11 +1311,11 @@ __size_of_read_sensors 0 0 ABS 0 - dist/default/production\AER201.production.obj
 update_state@i B6 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __Lcomram 0 0 ABS 0 comram dist/default/production\AER201.production.obj
 __Lconfig 300000 0 CONFIG 0 config dist/default/production\AER201.production.obj
-_printf 2ECA 0 CODE 0 text5 dist/default/production\AER201.production.obj
+_printf 2ECE 0 CODE 0 text5 dist/default/production\AER201.production.obj
 __size_of_set_time 0 0 ABS 0 - dist/default/production\AER201.production.obj
 _update_state 1F24 0 CODE 0 text1 dist/default/production\AER201.production.obj
 ___wmul@multiplier 80 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
-__end_ofi2_lcdInst 317C 0 CODE 0 text39 dist/default/production\AER201.production.obj
+__end_ofi2_lcdInst 3180 0 CODE 0 text39 dist/default/production\AER201.production.obj
 _discretize_counter 64 0 COMRAM 1 bssCOMRAM dist/default/production\AER201.production.obj
 _LATDbits F8C 0 ABS 0 - dist/default/production\AER201.production.obj
 __size_ofi2_lcdInst 0 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -1322,22 +1323,22 @@ __doprnt@c A1 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.ob
 __doprnt@f 8E 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\AER201.production.obj
 ___lwdiv@divisor 82 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
-_strcmp 2D7A 0 CODE 0 text4 dist/default/production\AER201.production.obj
-_strcpy 300C 0 CODE 0 text3 dist/default/production\AER201.production.obj
+_strcmp 2D7E 0 CODE 0 text4 dist/default/production\AER201.production.obj
+_strcpy 3010 0 CODE 0 text3 dist/default/production\AER201.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\AER201.production.obj
 __doprnt 12 0 CODE 0 text9 dist/default/production\AER201.production.obj
 _time_i 3E 0 COMRAM 1 bssCOMRAM dist/default/production\AER201.production.obj
-stackhi F7F 0 ABS 0 - C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
-stacklo 448 0 ABS 0 - C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
+stackhi F7F 0 ABS 0 - C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
+stacklo 448 0 ABS 0 - C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
 _menuIndex F6 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
 i2__doprnt@width 20 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\AER201.production.obj
-__end_ofi2_lcdNibble 2E26 0 CODE 0 text40 dist/default/production\AER201.production.obj
+__end_ofi2_lcdNibble 2E2A 0 CODE 0 text40 dist/default/production\AER201.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\AER201.production.obj
-__end_of_I2C_Master_Init 2D7A 0 CODE 0 text29 dist/default/production\AER201.production.obj
-__end_of_I2C_Master_Read 306C 0 CODE 0 text18 dist/default/production\AER201.production.obj
-__end_of_I2C_Master_Stop 318E 0 CODE 0 text21 dist/default/production\AER201.production.obj
-__end_of_I2C_Master_Wait 3146 0 CODE 0 text23 dist/default/production\AER201.production.obj
+__end_of_I2C_Master_Init 2D7E 0 CODE 0 text29 dist/default/production\AER201.production.obj
+__end_of_I2C_Master_Read 3070 0 CODE 0 text18 dist/default/production\AER201.production.obj
+__end_of_I2C_Master_Stop 3192 0 CODE 0 text21 dist/default/production\AER201.production.obj
+__end_of_I2C_Master_Wait 314A 0 CODE 0 text23 dist/default/production\AER201.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\AER201.production.obj
 set_time@i 83 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 _ADCON0bits FC2 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -1345,17 +1346,17 @@ __end_of_read_sensors 241A 0 CODE 0 text24 dist/default/production\AER201.produc
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __end_ofi2___awmod 2B86 0 CODE 0 text41 dist/default/production\AER201.production.obj
 strcpy@from 82 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
-i2_lcdInst 3170 0 CODE 0 text39 dist/default/production\AER201.production.obj
-__end_ofi2___lwdiv 2ECA 0 CODE 0 text38 dist/default/production\AER201.production.obj
-__end_ofi2___lwmod 2FA0 0 CODE 0 text37 dist/default/production\AER201.production.obj
+i2_lcdInst 3174 0 CODE 0 text39 dist/default/production\AER201.production.obj
+__end_ofi2___lwdiv 2ECE 0 CODE 0 text38 dist/default/production\AER201.production.obj
+__end_ofi2___lwmod 2FA4 0 CODE 0 text37 dist/default/production\AER201.production.obj
 display_menu@menuIndexPtr 176 0 BANK1 1 cstackBANK1 dist/default/production\AER201.production.obj
 _ndisplay0 14A 0 BANK1 1 bssBANK1 dist/default/production\AER201.production.obj
 _ndisplay1 15C 0 BANK1 1 bssBANK1 dist/default/production\AER201.production.obj
-__end_of_I2C_Master_Start 3196 0 CODE 0 text22 dist/default/production\AER201.production.obj
+__end_of_I2C_Master_Start 319A 0 CODE 0 text22 dist/default/production\AER201.production.obj
 __Lspace_0 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __Lspace_1 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __Lspace_2 0 0 ABS 0 - dist/default/production\AER201.production.obj
-__end_of_I2C_Master_Write 3186 0 CODE 0 text20 dist/default/production\AER201.production.obj
+__end_of_I2C_Master_Write 318A 0 CODE 0 text20 dist/default/production\AER201.production.obj
 __size_ofi2___awmod 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __pbssCOMRAM 3E 0 COMRAM 1 bssCOMRAM dist/default/production\AER201.production.obj
 __size_ofi2___lwdiv 0 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -1390,16 +1391,16 @@ ___lwdiv@dividend 80 0 BANK0 1 cstackBANK0 dist/default/production\AER201.produc
 ?___lwmod 87 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 i2___awmod 2B16 0 CODE 0 text41 dist/default/production\AER201.production.obj
 __size_ofi2__doprnt 0 0 ABS 0 - dist/default/production\AER201.production.obj
-i2___lwdiv 2E78 0 CODE 0 text38 dist/default/production\AER201.production.obj
-i2___lwmod 2F5E 0 CODE 0 text37 dist/default/production\AER201.production.obj
+i2___lwdiv 2E7C 0 CODE 0 text38 dist/default/production\AER201.production.obj
+i2___lwmod 2F62 0 CODE 0 text37 dist/default/production\AER201.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\AER201.production.obj
-_set_time 2CB8 0 CODE 0 text19 dist/default/production\AER201.production.obj
+_set_time 2CBC 0 CODE 0 text19 dist/default/production\AER201.production.obj
 _DIST1_PIN E3 0 BANK0 1 bssBANK0 dist/default/production\AER201.production.obj
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\AER201.production.obj
 __HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\AER201.production.obj
 _update_RTC 2586 0 CODE 0 text16 dist/default/production\AER201.production.obj
 _update_lcd 26F2 0 CODE 0 text2 dist/default/production\AER201.production.obj
-_initLCD 2F14 0 CODE 0 text26 dist/default/production\AER201.production.obj
+_initLCD 2F18 0 CODE 0 text26 dist/default/production\AER201.production.obj
 ___awmod@dividend 80 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __doprnt@idx 96 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __doprnt@len 98 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
@@ -1414,12 +1415,12 @@ __pcinit 2A0C 0 CODE 0 cinit dist/default/production\AER201.production.obj
 __ptext0 2B86 0 CODE 0 text0 dist/default/production\AER201.production.obj
 __ptext1 1F24 0 CODE 0 text1 dist/default/production\AER201.production.obj
 __ptext2 26F2 0 CODE 0 text2 dist/default/production\AER201.production.obj
-__ptext3 300C 0 CODE 0 text3 dist/default/production\AER201.production.obj
-__ptext4 2D7A 0 CODE 0 text4 dist/default/production\AER201.production.obj
-__ptext5 2ECA 0 CODE 0 text5 dist/default/production\AER201.production.obj
+__ptext3 3010 0 CODE 0 text3 dist/default/production\AER201.production.obj
+__ptext4 2D7E 0 CODE 0 text4 dist/default/production\AER201.production.obj
+__ptext5 2ECE 0 CODE 0 text5 dist/default/production\AER201.production.obj
 __ptext6 241A 0 CODE 0 text6 dist/default/production\AER201.production.obj
 __ptext7 17BA 0 CODE 0 text7 dist/default/production\AER201.production.obj
-__ptext8 2E26 0 CODE 0 text8 dist/default/production\AER201.production.obj
+__ptext8 2E2A 0 CODE 0 text8 dist/default/production\AER201.production.obj
 __ptext9 12 0 CODE 0 text9 dist/default/production\AER201.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\AER201.production.obj
 _creditIndex EA 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
@@ -1455,23 +1456,23 @@ __Ltext39 0 0 ABS 0 text39 dist/default/production\AER201.production.obj
 __Ltext40 0 0 ABS 0 text40 dist/default/production\AER201.production.obj
 __Ltext41 0 0 ABS 0 text41 dist/default/production\AER201.production.obj
 __Ltext42 0 0 ABS 0 text42 dist/default/production\AER201.production.obj
-__end_of_set_time 2D1A 0 CODE 0 text19 dist/default/production\AER201.production.obj
-__ramtop 1000 0 RAM 0 ramtop C:\Users\CLEMEN~1\AppData\Local\Temp\s3is.obj
-_sprintf 2E26 0 CODE 0 text8 dist/default/production\AER201.production.obj
+__end_of_set_time 2D1E 0 CODE 0 text19 dist/default/production\AER201.production.obj
+__ramtop 1000 0 RAM 0 ramtop C:\Users\CLEMEN~1\AppData\Local\Temp\sa90.obj
+_sprintf 2E2A 0 CODE 0 text8 dist/default/production\AER201.production.obj
 ?__doprnt 8C 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __end_of_update_state 21DE 0 CODE 0 text1 dist/default/production\AER201.production.obj
 __Lpowerup E 0 CODE 0 powerup dist/default/production\AER201.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\AER201.production.obj
 i2__doprnt 996 0 CODE 0 text33 dist/default/production\AER201.production.obj
-_I2C_Master_Init 2D1A 0 CODE 0 text29 dist/default/production\AER201.production.obj
-_I2C_Master_Read 303E 0 CODE 0 text18 dist/default/production\AER201.production.obj
-_I2C_Master_Stop 3186 0 CODE 0 text21 dist/default/production\AER201.production.obj
-_I2C_Master_Wait 3132 0 CODE 0 text23 dist/default/production\AER201.production.obj
+_I2C_Master_Init 2D1E 0 CODE 0 text29 dist/default/production\AER201.production.obj
+_I2C_Master_Read 3042 0 CODE 0 text18 dist/default/production\AER201.production.obj
+_I2C_Master_Stop 318A 0 CODE 0 text21 dist/default/production\AER201.production.obj
+_I2C_Master_Wait 3136 0 CODE 0 text23 dist/default/production\AER201.production.obj
 sprintf@ap AE 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 sprintf@pb B0 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 sprintf@wh A2 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 i2___awmod@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
-_isdigit 3098 0 CODE 0 text11 dist/default/production\AER201.production.obj
+_isdigit 309C 0 CODE 0 text11 dist/default/production\AER201.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\AER201.production.obj
 _timeDiff DD 0 BANK0 1 bssBANK0 dist/default/production\AER201.production.obj
 i2___awmod@sign 6 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
@@ -1489,7 +1490,7 @@ __CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\AER201.production.obj
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
-__pidataBANK0 311C 0 CODE 0 idataBANK0 dist/default/production\AER201.production.obj
+__pidataBANK0 3120 0 CODE 0 idataBANK0 dist/default/production\AER201.production.obj
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\AER201.production.obj
 _IR1_PIN E5 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
 _IR2_PIN E6 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
@@ -1498,8 +1499,8 @@ _eskaNoCap D5 0 BANK0 1 bssBANK0 dist/default/production\AER201.production.obj
 ___lldiv@quotient 88 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 _measure 72 0 COMRAM 1 dataCOMRAM dist/default/production\AER201.production.obj
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
-__end_ofi2_isdigit 3106 0 CODE 0 text35 dist/default/production\AER201.production.obj
-_display_menu$1103 174 0 BANK1 1 cstackBANK1 dist/default/production\AER201.production.obj
+__end_ofi2_isdigit 310A 0 CODE 0 text35 dist/default/production\AER201.production.obj
+_display_menu$1104 174 0 BANK1 1 cstackBANK1 dist/default/production\AER201.production.obj
 __pmediumconst FED4 0 MEDIUMCONST 0 mediumconst dist/default/production\AER201.production.obj
 _SSPCON1 FC6 0 ABS 0 - dist/default/production\AER201.production.obj
 _SSPCON2 FC5 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -1507,11 +1508,11 @@ __end_of_update_RTC 26F2 0 CODE 0 text16 dist/default/production\AER201.producti
 __end_of_update_lcd 27F0 0 CODE 0 text2 dist/default/production\AER201.production.obj
 _SSPSTAT FC7 0 ABS 0 - dist/default/production\AER201.production.obj
 __size_ofi2_isdigit 0 0 ABS 0 - dist/default/production\AER201.production.obj
-i2_isdigit$713 2 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
+i2_isdigit$714 2 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 __CFG_BOREN$SBORDIS 0 0 ABS 0 - dist/default/production\AER201.production.obj
 sprintf@f A4 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __end_of_keys FEE6 0 MEDIUMCONST 0 mediumconst dist/default/production\AER201.production.obj
-__end_of_main 2BEE 0 CODE 0 text0 dist/default/production\AER201.production.obj
+__end_of_main 2BF2 0 CODE 0 text0 dist/default/production\AER201.production.obj
 __pintcode 8 0 CODE 0 intcode dist/default/production\AER201.production.obj
 isdigit@c 82 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __size_of_keypressed 0 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -1529,7 +1530,8 @@ _PROX2 56 0 COMRAM 1 bssCOMRAM dist/default/production\AER201.production.obj
 _TRISB F93 0 ABS 0 - dist/default/production\AER201.production.obj
 _TRISC F94 0 ABS 0 - dist/default/production\AER201.production.obj
 _TRISD F95 0 ABS 0 - dist/default/production\AER201.production.obj
-__end_of_putch 311C 0 CODE 0 text10 dist/default/production\AER201.production.obj
+_TRISE F96 0 ABS 0 - dist/default/production\AER201.production.obj
+__end_of_putch 3120 0 CODE 0 text10 dist/default/production\AER201.production.obj
 __CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __HRAM 0 0 ABS 0 - dist/default/production\AER201.production.obj
@@ -1544,17 +1546,17 @@ __CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 _nRBPU 7F8F 0 ABS 0 - dist/default/production\AER201.production.obj
 __CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
-_putch 3106 0 CODE 0 text10 dist/default/production\AER201.production.obj
+_putch 310A 0 CODE 0 text10 dist/default/production\AER201.production.obj
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\AER201.production.obj
 _state E9 0 BANK0 1 dataBANK0 dist/default/production\AER201.production.obj
 i2__doprnt@flag 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
 i2__doprnt@prec 18 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
-i2_isdigit 30E8 0 CODE 0 text35 dist/default/production\AER201.production.obj
+i2_isdigit 30EC 0 CODE 0 text35 dist/default/production\AER201.production.obj
 __HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\AER201.production.obj
 _release_counter 68 0 COMRAM 1 bssCOMRAM dist/default/production\AER201.production.obj
 __pdataBIGRAM 178 0 BIGRAM 1 dataBIGRAM dist/default/production\AER201.production.obj
 keypressed@i 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
-__end_ofi2_putch 3170 0 CODE 0 text34 dist/default/production\AER201.production.obj
+__end_ofi2_putch 3174 0 CODE 0 text34 dist/default/production\AER201.production.obj
 __initialization 2A0C 0 CODE 0 cinit dist/default/production\AER201.production.obj
 __size_ofi2_lcdNibble 0 0 ABS 0 - dist/default/production\AER201.production.obj
 __pbssBANK0 BA 0 BANK0 1 bssBANK0 dist/default/production\AER201.production.obj
@@ -1562,7 +1564,7 @@ __pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/production\AER201.production.obj
 __pdataCOMRAM 6A 0 COMRAM 1 dataCOMRAM dist/default/production\AER201.production.obj
 _eskaWCap D7 0 BANK0 1 bssBANK0 dist/default/production\AER201.production.obj
 i2___lwmod@counter C 0 COMRAM 1 cstackCOMRAM dist/default/production\AER201.production.obj
-__end_of_lcdNibble 2C56 0 CODE 0 text28 dist/default/production\AER201.production.obj
+__end_of_lcdNibble 2C5A 0 CODE 0 text28 dist/default/production\AER201.production.obj
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\AER201.production.obj
 ___wmul@product 84 0 BANK0 1 cstackBANK0 dist/default/production\AER201.production.obj
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\AER201.production.obj
@@ -1599,13 +1601,13 @@ __Hintcode E 0 CODE 0 intcode dist/default/production\AER201.production.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 idloc 0 200000 200000 8 1
-text23 0 3132 3132 31 1
-text34 0 3164 3164 32 1
+text23 0 3136 3136 31 1
+text34 0 3168 3168 32 1
 cstackCOMRAM 1 1 1 77 1
 cstackBANK0 1 80 80 7A 1
 reset_vec 0 0 0 4 1
 bssBANK1 1 100 100 78 1
-intcode 0 8 8 3129 1
+intcode 0 8 8 312D 1
 dataBIGRAM 1 178 178 2D0 1
 mediumconst 0 FED4 FED4 12C 1
 config 0 300000 300000 E 1

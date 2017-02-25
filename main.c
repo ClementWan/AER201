@@ -108,6 +108,7 @@ void main(void) {
     TRISC = 0x00;
     TRISD = 0x00;   //All output mode
     TRISB = 0xFF;   //All input mode    
+    TRISE = 0x03;   //0 and 1 are input
     LATB = 0x00; 
     LATC = 0x00;
     ADCON0 = 0x00;  //Disable ADC
