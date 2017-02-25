@@ -69,17 +69,17 @@ char ndisplay0[18];
 char ndisplay1[18];
 
 
-char PROX1_PIN=0;//digital pins on port E
+char PROX1_PIN=0;//digital pins on port B to take advantage of pullup
 char PROX2_PIN=1;
 char DIST1_TRIG=5;//RC5 triggers DIST1 to be echo'ed
 char DIST1_PIN=0;//analog pins on port A
 char IR1_PIN=1;
 char IR2_PIN=2;
-int PROX1[5];
-int PROX2[5];
-int DIST1[5];
-int IR1[5];
-int IR2[5];
+unsigned int PROX1[5];
+unsigned int PROX2[5];
+unsigned int DIST1[5];
+unsigned int IR1[5];
+unsigned int IR2[5];
 int DIST_THRESHOLD_LOW=1024/4-1;
 int DIST_THRESHOLD_HI=1024*3/4-1;
 int IR_THRESHOLD_LOW=1024/4-1;
@@ -111,8 +111,13 @@ void main(void) {
     TRISE = 0x03;   //0 and 1 are input
     LATB = 0x00; 
     LATC = 0x00;
+    
     ADCON0 = 0x00;  //Disable ADC
-    ADCON1 = 0xFF;  //Set PORTB to be digital instead of analog default  
+    ADCON1 = 0x0B;  //AN0 to AN3 used as analog input (according to sample code)
+    CVRCON = 0x00; // Disable CCP reference voltage output
+    CMCONbits.CIS = 0;
+    ADFM = 1;       //ADC result is right justified
+    
     initLCD();
     INT1IE = 1;
     nRBPU = 0;
@@ -123,10 +128,14 @@ void main(void) {
     while(1){
         di();
         update_RTC();
-        read_sensors();
+        if (state=='x'){
+            read_sensors();
+            sort();
+        }
         update_state();
         update_display();//display is the internal array
         update_lcd();//lcd is the actual screen
+        while(state=='x');//termination loop upon emergency stop
         ei();
         __delay_ms(CYCLE_DELAY);
         di();
@@ -195,8 +204,14 @@ void update_display(void){
             display_menu();
             break;
         case 's':
-            sprintf(ndisplay0,"%d:%02d en:%02d ec:%02d ",(timeDiff/60),timeDiff%60, eskaNoCap,eskaWCap);
-            sprintf(ndisplay1,"yn:%02d yc:%02d", yopNoCap, yopWCap);
+            //sprintf(ndisplay0,"%d:%02d en:%02d ec:%02d ",(timeDiff/60),timeDiff%60, eskaNoCap,eskaWCap);
+            //sprintf(ndisplay1,"yn:%02d yc:%02d", yopNoCap, yopWCap);
+            //sprintf(ndisplay0, "IR1:%d IR2:%d", IR1[0], IR2[0]);
+            //sprintf(ndisplay1, "PROX1:%d MEAS:%d",PROX1[0], _measure());
+            sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
+            sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
+            int discretize_counter;//=3000/delay;
+
             break;
         default: 
             sprintf(ndisplay0, "ERROR");
@@ -414,12 +429,12 @@ void read_sensors(void){
         return;
     }
     // <editor-fold defaultstate="collapsed" desc="RIGHT SHIFT ARRAYS">
-    for(char i=0;i<5-1;i++){
-        PROX1[i+1]=PROX1[i];
-        PROX2[i+1]=PROX2[i];
-        DIST1[i+1]=DIST1[i];
-        IR1[i+1]=IR1[i];
-        IR2[i+1]=IR2[i];
+    for(char i=5-1;i>0;i--){
+        PROX1[i]=PROX1[i-1];
+        PROX2[i]=PROX2[i-1];
+        DIST1[i]=DIST1[i-1];
+        IR1[i]=IR1[i-1];
+        IR2[i]=IR2[i-1];
     }
     //</editor-fold>
     
@@ -432,8 +447,8 @@ void read_sensors(void){
     readADC(IR2_PIN);
     IR2[0]=16*16*ADRESH+ADRESL;
     //digital reads PORT E
-    PROX1[0]=(PORTE>>PROX1_PIN)&1;
-    PROX2[0]=(PORTE>>PROX2_PIN)&1;
+    PROX1[0]=(PORTB>>PROX1_PIN)&1;
+    PROX2[0]=(PORTB>>PROX2_PIN)&1;
     //</editor-fold>
     
     /*

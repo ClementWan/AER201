@@ -79,30 +79,30 @@
 [v i2_lcdNibble lcdNibble `(v  1 e 1 0 ]
 "101 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _main main `(v  1 e 1 0 ]
-"144
+"153
 [v _update_lcd update_lcd `(v  1 e 1 0 ]
-"165
+"174
 [v _update_RTC update_RTC `(v  1 e 1 0 ]
-"184
+"193
 [v _update_display update_display `(v  1 e 1 0 ]
-"208
+"223
 [v _update_state update_state `(v  1 e 1 0 ]
-"252
+"267
 [v _display_menu display_menu `(v  1 e 1 0 ]
-"298
+"313
 [v _keypressed keypressed `II(v  1 e 1 0 ]
-"401
+"416
 [v _set_time set_time `(v  1 e 1 0 ]
-"412
+"427
 [v _read_sensors read_sensors `(v  1 e 1 0 ]
-"546
+"467
+[v _sort sort `(v  1 e 1 0 ]
+"561
 [v __measure _measure `(i  1 e 2 0 ]
-"621
+"636
 [v _readADC readADC `(v  1 e 1 0 ]
 "185 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18f4620.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-"670
-[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
 "983
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
 "1094
@@ -138,42 +138,62 @@
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2251
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S132 . 1 `uc 1 CM 1 0 :3:0 
+`uc 1 CIS 1 0 :1:3 
+`uc 1 C1INV 1 0 :1:4 
+`uc 1 C2INV 1 0 :1:5 
+`uc 1 C1OUT 1 0 :1:6 
+`uc 1 C2OUT 1 0 :1:7 
+]
+"3647
+[s S139 . 1 `uc 1 CM0 1 0 :1:0 
+`uc 1 CM1 1 0 :1:1 
+`uc 1 CM2 1 0 :1:2 
+]
+[s S143 . 1 `uc 1 CMEN0 1 0 :1:0 
+`uc 1 CMEN1 1 0 :1:1 
+`uc 1 CMEN2 1 0 :1:2 
+]
+[u S147 . 1 `S132 1 . 1 0 `S139 1 . 1 0 `S143 1 . 1 0 ]
+[v _CMCONbits CMCONbits `VES147  1 e 1 @4020 ]
+"3711
+[v _CVRCON CVRCON `VEuc  1 e 1 @4021 ]
 "4390
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "4474
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S257 . 1 `uc 1 . 1 0 :1:0 
+[s S297 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "4518
-[s S260 . 1 `uc 1 ADON 1 0 :1:0 
+[s S300 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S264 . 1 `uc 1 . 1 0 :1:0 
+[s S304 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S271 . 1 `uc 1 . 1 0 :1:0 
+[s S311 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S274 . 1 `uc 1 . 1 0 :1:0 
+[s S314 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S277 . 1 `uc 1 . 1 0 :1:0 
+[s S317 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S280 . 1 `uc 1 . 1 0 :1:0 
+[s S320 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S283 . 1 `uc 1 . 1 0 :1:0 
+[s S323 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S286 . 1 `S257 1 . 1 0 `S260 1 . 1 0 `S264 1 . 1 0 `S271 1 . 1 0 `S274 1 . 1 0 `S277 1 . 1 0 `S280 1 . 1 0 `S283 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES286  1 e 1 @4034 ]
+[u S326 . 1 `S297 1 . 1 0 `S300 1 . 1 0 `S304 1 . 1 0 `S311 1 . 1 0 `S314 1 . 1 0 `S317 1 . 1 0 `S320 1 . 1 0 `S323 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES326  1 e 1 @4034 ]
 "4598
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "4604
@@ -188,7 +208,7 @@
 [v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
 "4966
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
-[s S135 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S172 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -198,7 +218,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "6298
-[s S144 . 1 `uc 1 . 1 0 :1:0 
+[s S181 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -207,16 +227,18 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S153 . 1 `uc 1 . 1 0 :6:0 
+[s S190 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S157 . 1 `S135 1 . 1 0 `S144 1 . 1 0 `S153 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES157  1 e 1 @4082 ]
+[u S194 . 1 `S172 1 . 1 0 `S181 1 . 1 0 `S190 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES194  1 e 1 @4082 ]
 "6604
 [v _ACKDT ACKDT `VEb  1 e 0 @32301 ]
 "6606
 [v _ACKEN ACKEN `VEb  1 e 0 @32300 ]
+"6626
+[v _ADFM ADFM `VEb  1 e 0 @32263 ]
 "6634
 [v _ADON ADON `VEb  1 e 0 @32272 ]
 "6896
@@ -306,15 +328,15 @@
 "77
 [v _IR2_PIN IR2_PIN `uc  1 e 1 0 ]
 "78
-[v _PROX1 PROX1 `[5]i  1 e 10 0 ]
+[v _PROX1 PROX1 `[5]ui  1 e 10 0 ]
 "79
-[v _PROX2 PROX2 `[5]i  1 e 10 0 ]
+[v _PROX2 PROX2 `[5]ui  1 e 10 0 ]
 "80
-[v _DIST1 DIST1 `[5]i  1 e 10 0 ]
+[v _DIST1 DIST1 `[5]ui  1 e 10 0 ]
 "81
-[v _IR1 IR1 `[5]i  1 e 10 0 ]
+[v _IR1 IR1 `[5]ui  1 e 10 0 ]
 "82
-[v _IR2 IR2 `[5]i  1 e 10 0 ]
+[v _IR2 IR2 `[5]ui  1 e 10 0 ]
 "83
 [v _DIST_THRESHOLD_LOW DIST_THRESHOLD_LOW `i  1 e 2 0 ]
 "84
@@ -342,21 +364,34 @@
 "101
 [v _main main `(v  1 e 1 0 ]
 {
-"143
+"152
 } 0
-"208
+"223
 [v _update_state update_state `(v  1 e 1 0 ]
 {
-"210
-[v update_state@i i `i  1 a 2 54 ]
-"251
+"225
+[v update_state@i i `i  1 a 2 52 ]
+"266
 } 0
-"144
+"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"8
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"42
+} 0
+"153 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _update_lcd update_lcd `(v  1 e 1 0 ]
 {
-"145
+"154
 [v update_lcd@flag flag `i  1 a 2 43 ]
-"164
+"173
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
 [v _strcpy strcpy `(*.39uc  1 e 2 0 ]
@@ -381,41 +416,41 @@
 "13 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
 {
-[s S454 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[s S501 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
 "21
-[v printf@pb pb `S454  1 a 4 38 ]
+[v printf@pb pb `S501  1 a 4 38 ]
 "15
 [v printf@ap ap `[1]*.39v  1 a 2 36 ]
 "13
 [v printf@f f `*.34Cuc  1 p 2 34 ]
 "28
 } 0
-"184 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"193 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _update_display update_display `(v  1 e 1 0 ]
 {
-"207
+"222
 } 0
-"252
+"267
 [v _display_menu display_menu `(v  1 e 1 0 ]
 {
-"254
-[v display_menu@menuIndexPtr menuIndexPtr `*.39i  1 a 2 8 ]
-"253
-[v display_menu@menuSelection menuSelection `i  1 a 2 4 ]
-"255
-[v display_menu@menuSizePtr menuSizePtr `*.39i  1 a 2 2 ]
-"256
-[v display_menu@selector selector `i  1 a 2 0 ]
-"297
+"269
+[v display_menu@menuIndexPtr menuIndexPtr `*.39i  1 a 2 63 ]
+"268
+[v display_menu@menuSelection menuSelection `i  1 a 2 59 ]
+"270
+[v display_menu@menuSizePtr menuSizePtr `*.39i  1 a 2 57 ]
+"271
+[v display_menu@selector selector `i  1 a 2 55 ]
+"312
 } 0
 "13 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S454 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[s S501 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
 "29
-[v sprintf@pb pb `S454  1 a 4 48 ]
+[v sprintf@pb pb `S501  1 a 4 46 ]
 "28
-[v sprintf@ap ap `[1]*.39v  1 a 2 46 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 44 ]
 "13
 [v sprintf@wh wh `*.39uc  1 p 2 34 ]
 [v sprintf@f f `*.34Cuc  1 p 2 36 ]
@@ -440,9 +475,9 @@
 [v __doprnt@flag flag `uc  1 a 1 30 ]
 "506
 [v __doprnt@prec prec `c  1 a 1 23 ]
-[s S454 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[s S501 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
 "458
-[v __doprnt@pb pb `*.39S454  1 p 2 12 ]
+[v __doprnt@pb pb `*.39S501  1 p 2 12 ]
 [v __doprnt@f f `*.34Cuc  1 p 2 14 ]
 [v __doprnt@ap ap `*.39*.39v  1 p 2 16 ]
 "1541
@@ -486,46 +521,12 @@
 [v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
 "31
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
-{
-"11
-[v ___awmod@sign sign `uc  1 a 1 5 ]
-[v ___awmod@counter counter `uc  1 a 1 4 ]
-"8
-[v ___awmod@dividend dividend `i  1 p 2 0 ]
-[v ___awmod@divisor divisor `i  1 p 2 2 ]
-"35
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-{
-"11
-[v ___awdiv@quotient quotient `i  1 a 2 6 ]
-"12
-[v ___awdiv@sign sign `uc  1 a 1 5 ]
-[v ___awdiv@counter counter `uc  1 a 1 4 ]
-"8
-[v ___awdiv@dividend dividend `i  1 p 2 0 ]
-[v ___awdiv@divisor divisor `i  1 p 2 2 ]
-"42
-} 0
-"165 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"174 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _update_RTC update_RTC `(v  1 e 1 0 ]
 {
-"176
+"185
 [v update_RTC@i i `uc  1 a 1 10 ]
-"183
-} 0
-"15 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
+"192
 } 0
 "53 C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
 [v _I2C_Master_Read I2C_Master_Read `(uc  1 e 1 0 ]
@@ -539,12 +540,63 @@
 [v I2C_Master_Read@a a `uc  1 a 1 1 ]
 "64
 } 0
-"401 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"467 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+[v _sort sort `(v  1 e 1 0 ]
+{
+"480
+[v sort@i i `i  1 a 2 24 ]
+"560
+} 0
+"561
+[v __measure _measure `(i  1 e 2 0 ]
+{
+"611
+[v __measure@i_489 i `uc  1 a 1 17 ]
+"606
+[v __measure@i_488 i `uc  1 a 1 16 ]
+"601
+[v __measure@i_487 i `uc  1 a 1 15 ]
+"596
+[v __measure@i_486 i `uc  1 a 1 14 ]
+"590
+[v __measure@i_485 i `uc  1 a 1 13 ]
+"586
+[v __measure@i_484 i `uc  1 a 1 12 ]
+"580
+[v __measure@i_483 i `uc  1 a 1 11 ]
+"576
+[v __measure@i i `uc  1 a 1 10 ]
+"573
+[v __measure@measurement measurement `i  1 a 2 18 ]
+"635
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"8
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"35
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"416 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _set_time set_time `(v  1 e 1 0 ]
 {
-"405
+"420
 [v set_time@i i `uc  1 a 1 3 ]
-"411
+"426
 } 0
 "47 C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
@@ -567,21 +619,21 @@
 {
 "27
 } 0
-"412 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"427 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _read_sensors read_sensors `(v  1 e 1 0 ]
 {
-"417
-[v read_sensors@i i `uc  1 a 1 4 ]
-"451
+"432
+[v read_sensors@i i `uc  1 a 1 6 ]
+"466
 } 0
-"621
+"636
 [v _readADC readADC `(v  1 e 1 0 ]
 {
 [v readADC@channel channel `uc  1 a 1 wreg ]
 [v readADC@channel channel `uc  1 a 1 wreg ]
-"623
+"638
 [v readADC@channel channel `uc  1 a 1 1 ]
-"629
+"644
 } 0
 "14 C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
 [v _initLCD initLCD `(v  1 e 1 0 ]
@@ -626,20 +678,20 @@
 [v ___lldiv@divisor divisor `ul  1 p 4 4 ]
 "31
 } 0
-"298 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"313 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _keypressed keypressed `II(v  1 e 1 0 ]
 {
-"301
+"316
 [v keypressed@i i `i  1 a 2 58 ]
-"302
+"317
 [v keypressed@keypress keypress `uc  1 a 1 60 ]
-"400
+"415
 } 0
 "13 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
 [v i2_printf printf `(i  1 e 2 0 ]
 {
-[s S454 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
-[v i2printf@pb printf `S454  1 a 4 38 ]
+[s S501 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[v i2printf@pb printf `S501  1 a 4 38 ]
 [v i2printf@ap printf `[1]*.39v  1 a 2 36 ]
 [v i2printf@f f `*.34Cuc  1 p 2 34 ]
 "28
@@ -655,8 +707,8 @@
 [v i2__doprnt@flag _doprnt `uc  1 a 1 30 ]
 [v i2__doprnt@prec _doprnt `c  1 a 1 23 ]
 [v i2__doprnt@idx _doprnt `uc  1 a 1 22 ]
-[s S454 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
-[v i2__doprnt@pb pb `*.39S454  1 p 2 12 ]
+[s S501 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[v i2__doprnt@pb pb `*.39S501  1 p 2 12 ]
 [v i2__doprnt@f f `*.34Cuc  1 p 2 14 ]
 [v i2__doprnt@ap ap `*.39*.39v  1 p 2 16 ]
 "1541

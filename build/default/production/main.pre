@@ -3862,11 +3862,11 @@ char DIST1_TRIG=5;
 char DIST1_PIN=0;
 char IR1_PIN=1;
 char IR2_PIN=2;
-int PROX1[5];
-int PROX2[5];
-int DIST1[5];
-int IR1[5];
-int IR2[5];
+unsigned int PROX1[5];
+unsigned int PROX2[5];
+unsigned int DIST1[5];
+unsigned int IR1[5];
+unsigned int IR2[5];
 int DIST_THRESHOLD_LOW=1024/4-1;
 int DIST_THRESHOLD_HI=1024*3/4-1;
 int IR_THRESHOLD_LOW=1024/4-1;
@@ -3894,8 +3894,13 @@ TRISB = 0xFF;
 TRISE = 0x03;
 LATB = 0x00;
 LATC = 0x00;
+
 ADCON0 = 0x00;
-ADCON1 = 0xFF;
+ADCON1 = 0x0B;
+CVRCON = 0x00;
+CMCONbits.CIS = 0;
+ADFM = 1;
+
 initLCD();
 INT1IE = 1;
 nRBPU = 0;
@@ -3906,15 +3911,19 @@ set_time();
 while(1){
 (INTCONbits.GIE = 0);
 update_RTC();
+if (state=='x'){
 read_sensors();
+sort();
+}
 update_state();
 update_display();
 update_lcd();
+while(state=='x');
 (INTCONbits.GIE = 1);
 _delay((unsigned long)((50)*(10000000/4000.0)));
 (INTCONbits.GIE = 0);
 
-# 140
+# 149
 }
 
 return;
@@ -3973,8 +3982,14 @@ case 'e':
 display_menu();
 break;
 case 's':
-sprintf(ndisplay0,"%d:%02d en:%02d ec:%02d ",(timeDiff/60),timeDiff%60, eskaNoCap,eskaWCap);
-sprintf(ndisplay1,"yn:%02d yc:%02d", yopNoCap, yopWCap);
+
+
+
+
+sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
+sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
+int discretize_counter;
+
 break;
 default:
 sprintf(ndisplay0, "ERROR");
@@ -4006,7 +4021,7 @@ nstate='r';
 }
 state=nstate;
 
-# 237
+# 252
 if (state!='m'&&state!='l'&&state!='c')
 {
 menuIndex=1;
@@ -4163,7 +4178,7 @@ break;
 }
 INT1IF = 0;
 
-# 399
+# 414
 }
 }
 void set_time(void){
@@ -4182,12 +4197,12 @@ if (state!='s'){
 return;
 }
 
-for(char i=0;i<5-1;i++){
-PROX1[i+1]=PROX1[i];
-PROX2[i+1]=PROX2[i];
-DIST1[i+1]=DIST1[i];
-IR1[i+1]=IR1[i];
-IR2[i+1]=IR2[i];
+for(char i=5-1;i>0;i--){
+PROX1[i]=PROX1[i-1];
+PROX2[i]=PROX2[i-1];
+DIST1[i]=DIST1[i-1];
+IR1[i]=IR1[i-1];
+IR2[i]=IR2[i-1];
 }
 
 
@@ -4200,10 +4215,10 @@ IR1[0]=16*16*ADRESH+ADRESL;
 readADC(IR2_PIN);
 IR2[0]=16*16*ADRESH+ADRESL;
 
-PROX1[0]=(PORTE>>PROX1_PIN)&1;
-PROX2[0]=(PORTE>>PROX2_PIN)&1;
+PROX1[0]=(PORTB>>PROX1_PIN)&1;
+PROX2[0]=(PORTB>>PROX2_PIN)&1;
 
-# 451
+# 466
 }
 void sort (void){
 
@@ -4270,11 +4285,11 @@ release_counter--;
 if (time_i[1]*60-latestSortedBottleTime[1]*60+time_i[0]-latestSortedBottleTime[0]>=15)
 nstate='e';
 
-# 545
+# 560
 }
 int _measure(void){
 
-# 558
+# 573
 int measurement=0;
 
 
