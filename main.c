@@ -70,7 +70,7 @@ char ndisplay1[18];
 
 
 char PROX1_PIN=0;//digital pins on port B to take advantage of pullup
-char PROX2_PIN=1;
+char PROX2_PIN=2;
 char DIST1_TRIG=5;//RC5 triggers DIST1 to be echo'ed
 char DIST1_PIN=0;//analog pins on port A
 char IR1_PIN=1;
@@ -88,10 +88,10 @@ int IR_THRESHOLD_HI=1024*3/4-1;
 
 int discretize;//=3000/delay;//3 seconds for discretize step at the start of the default substate
 int discretize_counter;//=3000/delay;
-int release=(4000);///delay;//1 second to open flaps, push for half a second, wait for 1.5 seconds. return to default state while closing for 1 second.
+int release;//4000/delay;//1 second to open flaps, push for half a second, wait for 1.5 seconds. return to default state while closing for 1 second.
 int release_counter=0;
 
-int measure=5;
+int measure;
 int measure_counter=0;
 
 int latestSortedBottleTime[7];//if no bottle is successfully sorted in 15 seconds, terminate
@@ -99,10 +99,11 @@ int bottle_type=0;//0 when no bottle identified yet, 1-4 for each en, ec, yn, yc
 //char substate='d';//default, release, commented for now as the "States" are determined by discretize measure, and release countdown values
     //</editor-fold>
 void main(void) {
-    //discretize=3000/delay;//3 seconds for discretize step at the start of the default substate
-    //discretize_counter=3000/delay;
-    //release=(4000)/delay;//1 second to open flaps, push for half a second, wait for 1.5 seconds. return to default state while closing for 1 second.
-
+    discretize=3000/(CYCLE_DELAY+10);//3 seconds for discretize step at the start of the default substate
+    release=(4000)/(CYCLE_DELAY+10); //1 second to open flaps, push for half a second, wait for 1.5 seconds. return to default state while closing for 1 second.
+    measure=5+500/(CYCLE_DELAY+10);  //5 measurement ticks 
+                                //plus half a second to allow the bottle 
+                                //to settle into place from the moment its detected
     // <editor-fold defaultstate="collapsed" desc=" STARTUP SEQUENCE ">
     
     TRISC = 0x00;
@@ -128,7 +129,7 @@ void main(void) {
     while(1){
         di();
         update_RTC();
-        if (state=='x'){
+        if (state=='s'){
             read_sensors();
             sort();
         }
@@ -204,14 +205,22 @@ void update_display(void){
             display_menu();
             break;
         case 's':
+            //DEFAUlT
             //sprintf(ndisplay0,"%d:%02d en:%02d ec:%02d ",(timeDiff/60),timeDiff%60, eskaNoCap,eskaWCap);
             //sprintf(ndisplay1,"yn:%02d yc:%02d", yopNoCap, yopWCap);
+            
+            //SENSORS
             //sprintf(ndisplay0, "IR1:%d IR2:%d", IR1[0], IR2[0]);
-            //sprintf(ndisplay1, "PROX1:%d MEAS:%d",PROX1[0], _measure());
+            //sprintf(ndisplay0, "P1[0]:%d P2[0]:%d", PROX1[0], PROX2[0]);
+            //sprintf(ndisplay1, "P1[1,2]:%d,%d M:%d",PROX1[1],PROX1[2], _measure());
+            
+            //COUNTERS
             sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
             sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
-            int discretize_counter;//=3000/delay;
-
+            
+            //PORTS
+            //sprintf(ndisplay0, "PORTB,%d", (int)PORTB);
+            //sprintf(ndisplay1, "P1[1,2]:%d,%d M:%d",PROX1[1],PROX1[2], _measure());
             break;
         default: 
             sprintf(ndisplay0, "ERROR");
@@ -222,9 +231,13 @@ void update_display(void){
 }
 void update_state(void){
     if ((nstate=='s'&&state!='s')||(nstate=='m'&&state!='m')){
-        int i;
-        for (i=0;i<7;i++)
+        for (char i=0;i<7;i++){
             startTime[i]=time_i[i];
+            latestSortedBottleTime[i]=time_i[i];
+            discretize_counter=3000/CYCLE_DELAY;
+            measure_counter=0;
+            release_counter=0;
+        }
     }
     sorted_bottles=eskaNoCap+eskaWCap+yopNoCap+yopWCap;
     sorted_bottles%=100;
@@ -475,6 +488,7 @@ void sort (void){
     //no significance to discretize_counter=0;
     //</editor-fold>
     // <editor-fold defaultstate="collapsed" desc="MEASURE">
+    //if one of the prox sensors detect something, measure count is 0, release counter is late in the cycle
     if ((PROX1[0]+PROX2[0])&&measure_counter==0&&release_counter<=1000/CYCLE_DELAY){
         measure_counter=measure;
         int i;
@@ -483,7 +497,8 @@ void sort (void){
     }
     if (measure_counter==1){
          bottle_type=_measure();
-        if (bottle_type!=0){
+         //only release when a bottle is identified, and the previous bottle is cleared out of the way
+        if (bottle_type!=0&&release_counter==0){
             release_counter=release;
             if (bottle_type==1)
                 eskaNoCap++;
@@ -614,15 +629,15 @@ int _measure(void){
         return 0;
     //</editor-fold>
     //</editor-fold>
-    measurement=0;
+    measurement=2;
     // <editor-fold defaultstate="collapsed" desc="DISTANCE+PROXIMITY">
     if (DIST1[0]>DIST_THRESHOLD_HI)
         return 0;
     if (DIST1[0]>DIST_THRESHOLD_LOW){
-        measurement+=PROX2[0];
+        measurement-=PROX2[0];
     }
     else
-        measurement+=PROX1[0];
+        measurement-=PROX1[0];
     //</editor-fold>
     // <editor-fold defaultstate="collapsed" desc="IR">
     if (IR1[0]>IR_THRESHOLD_HI||IR2[0]>IR_THRESHOLD_HI);//eska if at least one sensor reads high

@@ -3857,7 +3857,7 @@ char ndisplay1[18];
 
 
 char PROX1_PIN=0;
-char PROX2_PIN=1;
+char PROX2_PIN=2;
 char DIST1_TRIG=5;
 char DIST1_PIN=0;
 char IR1_PIN=1;
@@ -3875,10 +3875,10 @@ int IR_THRESHOLD_HI=1024*3/4-1;
 
 int discretize;
 int discretize_counter;
-int release=(4000);
+int release;
 int release_counter=0;
 
-int measure=5;
+int measure;
 int measure_counter=0;
 
 int latestSortedBottleTime[7];
@@ -3886,8 +3886,13 @@ int bottle_type=0;
 
 
 void main(void) {
+discretize=3000/(40+10);
+release=(4000)/(40+10);
+measure=5+500/(40+10);
 
-# 108
+
+
+
 TRISC = 0x00;
 TRISD = 0x00;
 TRISB = 0xFF;
@@ -3911,7 +3916,7 @@ set_time();
 while(1){
 (INTCONbits.GIE = 0);
 update_RTC();
-if (state=='x'){
+if (state=='s'){
 read_sensors();
 sort();
 }
@@ -3920,10 +3925,10 @@ update_display();
 update_lcd();
 while(state=='x');
 (INTCONbits.GIE = 1);
-_delay((unsigned long)((50)*(10000000/4000.0)));
+_delay((unsigned long)((40)*(10000000/4000.0)));
 (INTCONbits.GIE = 0);
 
-# 149
+# 150
 }
 
 return;
@@ -3983,12 +3988,12 @@ display_menu();
 break;
 case 's':
 
-
-
-
+# 218
 sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
 sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
-int discretize_counter;
+
+
+
 
 break;
 default:
@@ -4000,9 +4005,13 @@ break;
 }
 void update_state(void){
 if ((nstate=='s'&&state!='s')||(nstate=='m'&&state!='m')){
-int i;
-for (i=0;i<7;i++)
+for (char i=0;i<7;i++){
 startTime[i]=time_i[i];
+latestSortedBottleTime[i]=time_i[i];
+discretize_counter=3000/40;
+measure_counter=0;
+release_counter=0;
+}
 }
 sorted_bottles=eskaNoCap+eskaWCap+yopNoCap+yopWCap;
 sorted_bottles%=100;
@@ -4021,7 +4030,7 @@ nstate='r';
 }
 state=nstate;
 
-# 252
+# 265
 if (state!='m'&&state!='l'&&state!='c')
 {
 menuIndex=1;
@@ -4178,7 +4187,7 @@ break;
 }
 INT1IF = 0;
 
-# 414
+# 427
 }
 }
 void set_time(void){
@@ -4218,20 +4227,21 @@ IR2[0]=16*16*ADRESH+ADRESL;
 PROX1[0]=(PORTB>>PROX1_PIN)&1;
 PROX2[0]=(PORTB>>PROX2_PIN)&1;
 
-# 466
+# 479
 }
 void sort (void){
 
-if (discretize_counter>2000/50)
+if (discretize_counter>2000/40)
 ;
-else if (discretize_counter>1000/50)
+else if (discretize_counter>1000/40)
 ;
 else if (discretize_counter>0)
 ;
 
 
 
-if ((PROX1[0]+PROX2[0])&&measure_counter==0&&release_counter<=1000/50){
+
+if ((PROX1[0]+PROX2[0])&&measure_counter==0&&release_counter<=1000/40){
 measure_counter=measure;
 int i;
 for (i=0;i<7;i++)
@@ -4239,7 +4249,8 @@ latestSortedBottleTime[i]=time_i[i];
 }
 if (measure_counter==1){
 bottle_type=_measure();
-if (bottle_type!=0){
+
+if (bottle_type!=0&&release_counter==0){
 release_counter=release;
 if (bottle_type==1)
 eskaNoCap++;
@@ -4257,17 +4268,17 @@ measure_counter+=1;
 
 
 
-if (release_counter==1000/50)
+if (release_counter==1000/40)
 discretize_counter=discretize;
-else if (release_counter>3500/50)
+else if (release_counter>3500/40)
 ;
-else if (release_counter>3000/50)
+else if (release_counter>3000/40)
 ;
-else if (release_counter>2500/50)
+else if (release_counter>2500/40)
 ;
-else if (release_counter>2000/50)
+else if (release_counter>2000/40)
 ;
-else if (release_counter>1000/50)
+else if (release_counter>1000/40)
 ;
 else if (release_counter>0){
 ;
@@ -4285,11 +4296,11 @@ release_counter--;
 if (time_i[1]*60-latestSortedBottleTime[1]*60+time_i[0]-latestSortedBottleTime[0]>=15)
 nstate='e';
 
-# 560
+# 575
 }
 int _measure(void){
 
-# 573
+# 588
 int measurement=0;
 
 
@@ -4334,15 +4345,15 @@ if (measurement%5!=0)
 return 0;
 
 
-measurement=0;
+measurement=2;
 
 if (DIST1[0]>DIST_THRESHOLD_HI)
 return 0;
 if (DIST1[0]>DIST_THRESHOLD_LOW){
-measurement+=PROX2[0];
+measurement-=PROX2[0];
 }
 else
-measurement+=PROX1[0];
+measurement-=PROX1[0];
 
 
 if (IR1[0]>IR_THRESHOLD_HI||IR2[0]>IR_THRESHOLD_HI);

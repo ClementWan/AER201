@@ -13,7 +13,7 @@
 #define E           LATDbits.LATD3
 #define	LCD_PORT    LATD   //On LATD[4,7] to be specific
 #define LCD_DELAY   25
-#define CYCLE_DELAY 50
+#define CYCLE_DELAY 40
 
 #endif	/* CONSTANTS_H */
 
