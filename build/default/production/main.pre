@@ -3829,6 +3829,10 @@ int creditSize=6-1;
 int endIndex=1;
 int endSize=4-1;
 
+int sortIndex=1;
+int sortSize=5;
+
+
 
 const char keys[] = "123A456B789C*0#D";
 const char manualDateTime[7] = { 0x00,
@@ -3886,19 +3890,22 @@ int bottle_type=0;
 
 
 void main(void) {
-discretize=3000/(40+10);
-release=(4000)/(40+10);
-measure=5+500/(40+10);
+
+discretize=3000/(40);
+release=(4000)/(40);
+measure=5+500/(40);
 
 
 
 
+TRISA = 0xE7;
 TRISC = 0x00;
 TRISD = 0x00;
 TRISB = 0xFF;
-TRISE = 0x03;
+TRISE = 0xFF;
 LATB = 0x00;
-LATC = 0x00;
+
+LATE= 0x00;
 
 ADCON0 = 0x00;
 ADCON1 = 0x0B;
@@ -3925,10 +3932,10 @@ update_display();
 update_lcd();
 while(state=='x');
 (INTCONbits.GIE = 1);
-_delay((unsigned long)((40)*(10000000/4000.0)));
+_delay((unsigned long)((40-10)*(10000000/4000.0)));
 (INTCONbits.GIE = 0);
 
-# 150
+# 157
 }
 
 return;
@@ -3988,10 +3995,32 @@ display_menu();
 break;
 case 's':
 
-# 218
+if (sortIndex==1){
+sprintf(ndisplay0,"%d:%02d en:%02d ec:%02d ",(timeDiff/60),timeDiff%60, eskaNoCap,eskaWCap);
+sprintf(ndisplay1,"yn:%02d yc:%02d", yopNoCap, yopWCap);
+}
+
+else if (sortIndex==2){
 sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
 sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
+}
 
+# 240
+else if (sortIndex==3){
+
+sprintf(ndisplay0, "P1[0-2]:%d,%d,%d", PROX1[0], PROX1[1], PROX1[2]);
+sprintf(ndisplay1, "P2[0-1]:%d,%d M:%d",PROX2[0],PROX2[1], _measure());
+}
+else if (sortIndex==4){
+
+sprintf(ndisplay0, "IR1[0]:%04d", IR1[0]);
+sprintf(ndisplay1, "IR2[0]:%04dM:%d",IR2[0], _measure());
+}
+else if (sortIndex==5){
+
+sprintf(ndisplay0, "PIR:%d%d,%04d,%04d",PROX1[0], PROX2[0], IR1[0], IR2[0]);
+sprintf(ndisplay1, "DIST[0]:%04d M:%d",DIST1[0], _measure());
+}
 
 
 
@@ -4028,17 +4057,21 @@ sprintf(menu[3][3],"yn:%02d yc:%02d    ", yopNoCap, yopWCap);
 if ((state=='m'||state=='l'||state=='c')&&timeDiff>=10){
 nstate='r';
 }
-state=nstate;
 
-# 265
-if (state!='m'&&state!='l'&&state!='c')
+if (nstate!='m'&&nstate!='l'&&nstate!='c')
 {
 menuIndex=1;
 logIndex=1;
 creditIndex=1;
 }
-if (state!='e')
+if (nstate!='s')
+sortIndex=1;
+if (nstate!='e')
 endIndex=1;
+
+state=nstate;
+
+# 311
 if (state=='r'){
 eskaNoCap=0;
 eskaWCap=0;
@@ -4172,6 +4205,10 @@ yopWCap%=100;
 }
 else if (keys[keypress]=='7'||keys[keypress]=='8')
 nstate='e';
+else if (keys[keypress]=='B'&&sortIndex<sortSize)
+sortIndex++;
+else if (keys[keypress]=='A'&&sortIndex>1)
+sortIndex--;
 break;
 case 'e':
 if (keys[keypress]=='B'&&endIndex<endSize)
@@ -4187,7 +4224,7 @@ break;
 }
 INT1IF = 0;
 
-# 427
+# 469
 }
 }
 void set_time(void){
@@ -4227,16 +4264,19 @@ IR2[0]=16*16*ADRESH+ADRESL;
 PROX1[0]=(PORTB>>PROX1_PIN)&1;
 PROX2[0]=(PORTB>>PROX2_PIN)&1;
 
-# 479
+# 521
 }
 void sort (void){
 
 if (discretize_counter>2000/40)
-;
+LATA|=1<<3;
 else if (discretize_counter>1000/40)
-;
-else if (discretize_counter>0)
-;
+LATA&=~(1<<3);
+else if (discretize_counter>0){
+LATA|=1<<4;
+if (discretize_counter==1)
+LATA&=~(1<<4);
+}
 
 
 
@@ -4270,18 +4310,27 @@ measure_counter+=1;
 
 if (release_counter==1000/40)
 discretize_counter=discretize;
-else if (release_counter>3500/40)
+else if (release_counter>3500/40){
+LATC|=1<<(bottle_type-1)%3;
+}
+else if (release_counter>3000/40){
+LATC&=~(1<<(bottle_type-1)%3);
+LATD|=0x01;
+}
+else if (release_counter>2500/40){
+LATD&=~(0x01);
+LATC|=0x20;
+}
+else if (release_counter>2000/40){
+LATC&=~(0x20);
+}
+else if (release_counter>1000/40){
 ;
-else if (release_counter>3000/40)
-;
-else if (release_counter>2500/40)
-;
-else if (release_counter>2000/40)
-;
-else if (release_counter>1000/40)
-;
+}
 else if (release_counter>0){
-;
+LATE|=1<<(bottle_type-1)%3;
+if (release_counter==1)
+LATE&=~(1<<(bottle_type-1)%3);
 }
 
 
@@ -4296,11 +4345,11 @@ release_counter--;
 if (time_i[1]*60-latestSortedBottleTime[1]*60+time_i[0]-latestSortedBottleTime[0]>=15)
 nstate='e';
 
-# 575
+# 629
 }
 int _measure(void){
 
-# 588
+# 642
 int measurement=0;
 
 

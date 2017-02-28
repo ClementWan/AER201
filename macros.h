@@ -19,6 +19,6 @@
 #define __lcd_clear() lcdInst(0x01);__delay_ms(10);
 #define __lcd_home() lcdInst(0b10000000);
 #define __lcd_killcursor() lcdInst(0b10010000);
-
+//#define __hex_to_bin() for(char i=0;i<32;i++) {bits[i]=hex&1;hex>>=1;}
 #endif	/* MACROS_H */
 

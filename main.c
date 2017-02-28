@@ -40,7 +40,11 @@ int creditIndex=1;
 int creditSize=6-1;
 
 int endIndex=1;
-int endSize=4-1;    //</editor-fold>
+int endSize=4-1;
+
+int sortIndex=1;
+int sortSize=5;
+    //</editor-fold>
 // <editor-fold defaultstate="collapsed" desc=" GLOBAL VARS">
 
 const char keys[] = "123A456B789C*0#D"; 
@@ -99,19 +103,22 @@ int bottle_type=0;//0 when no bottle identified yet, 1-4 for each en, ec, yn, yc
 //char substate='d';//default, release, commented for now as the "States" are determined by discretize measure, and release countdown values
     //</editor-fold>
 void main(void) {
-    discretize=3000/(CYCLE_DELAY+10);//3 seconds for discretize step at the start of the default substate
-    release=(4000)/(CYCLE_DELAY+10); //1 second to open flaps, push for half a second, wait for 1.5 seconds. return to default state while closing for 1 second.
-    measure=5+500/(CYCLE_DELAY+10);  //5 measurement ticks 
+
+    discretize=3000/(CYCLE_DELAY);//3 seconds for discretize step at the start of the default substate
+    release=(4000)/(CYCLE_DELAY); //1 second to open flaps, push for half a second, wait for 1.5 seconds. return to default state while closing for 1 second.
+    measure=5+500/(CYCLE_DELAY);  //5 measurement ticks 
                                 //plus half a second to allow the bottle 
                                 //to settle into place from the moment its detected
     // <editor-fold defaultstate="collapsed" desc=" STARTUP SEQUENCE ">
-    
+    //0 for output 1 for input
+    TRISA = 0xE7;//pins 3 and 4 are output. pins 0, 1, 2 are input.
     TRISC = 0x00;
     TRISD = 0x00;   //All output mode
     TRISB = 0xFF;   //All input mode    
-    TRISE = 0x03;   //0 and 1 are input
+    TRISE = 0xFF;   //0,1 and 2 are output
     LATB = 0x00; 
-    LATC = 0x00;
+    //LATC = 0x00;
+    LATE= 0x00;
     
     ADCON0 = 0x00;  //Disable ADC
     ADCON1 = 0x0B;  //AN0 to AN3 used as analog input (according to sample code)
@@ -138,7 +145,7 @@ void main(void) {
         update_lcd();//lcd is the actual screen
         while(state=='x');//termination loop upon emergency stop
         ei();
-        __delay_ms(CYCLE_DELAY);
+        __delay_ms(CYCLE_DELAY-10);
         di();
         /*
         sprintf(ndisplay0, "ding");
@@ -204,20 +211,47 @@ void update_display(void){
         case 'e':
             display_menu();
             break;
-        case 's':
+        case 's'://sorting displays like a menu, but has live updating information, so belongs here and not addressed there.
             //DEFAUlT
-            //sprintf(ndisplay0,"%d:%02d en:%02d ec:%02d ",(timeDiff/60),timeDiff%60, eskaNoCap,eskaWCap);
-            //sprintf(ndisplay1,"yn:%02d yc:%02d", yopNoCap, yopWCap);
-            
-            //SENSORS
-            //sprintf(ndisplay0, "IR1:%d IR2:%d", IR1[0], IR2[0]);
-            //sprintf(ndisplay0, "P1[0]:%d P2[0]:%d", PROX1[0], PROX2[0]);
-            //sprintf(ndisplay1, "P1[1,2]:%d,%d M:%d",PROX1[1],PROX1[2], _measure());
-            
+            if (sortIndex==1){
+                sprintf(ndisplay0,"%d:%02d en:%02d ec:%02d ",(timeDiff/60),timeDiff%60, eskaNoCap,eskaWCap);
+                sprintf(ndisplay1,"yn:%02d yc:%02d", yopNoCap, yopWCap);
+            }
             //COUNTERS
-            sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
-            sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
-            
+            else if (sortIndex==2){
+                sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
+                sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
+            }
+            /*//PORTS
+            else if (sortIndex==3){
+                int a=0;
+                for (char i=8;i>0;i--){
+                    readADC(i-1);
+                    a*=10;
+                    a+=(ADRESH>>1)&0b1;
+                }
+                //readADC(2);
+                //a=ADRESH;
+                sprintf(ndisplay0, "A:%07d",a);
+                //sprintf(ndisplay0, "A:%d%d%d%d%d%d%d%d", (PORTA>>7)&1, (PORTA>>6)&1, (PORTA>>5)&1, (PORTA>>4)&1, (PORTA>3)&1, (PORTA>>2)&1, (PORTA>>1)&1, (PORTA>>0)&1);
+                sprintf(ndisplay1, "B:%d%d%d%d%d%d%d%d M:%d", (PORTB>>7)&1, (PORTB>>6)&1, (PORTB>>5)&1, (PORTB>>4)&1, (PORTB>3)&1, (PORTB>>2)&1, (PORTB>>1)&1, (PORTB>>0)&1, _measure());
+            }*/
+            //SENSORS
+            else if (sortIndex==3){
+                //sprintf(ndisplay0, "IR1:%d IR2:%d", IR1[0], IR2[0]);
+                sprintf(ndisplay0, "P1[0-2]:%d,%d,%d", PROX1[0], PROX1[1], PROX1[2]);
+                sprintf(ndisplay1, "P2[0-1]:%d,%d M:%d",PROX2[0],PROX2[1], _measure());
+            }
+            else if (sortIndex==4){
+                //sprintf(ndisplay0, "IR1:%d IR2:%d", IR1[0], IR2[0]);
+                sprintf(ndisplay0, "IR1[0]:%04d", IR1[0]);
+                sprintf(ndisplay1, "IR2[0]:%04dM:%d",IR2[0], _measure());
+            }
+            else if (sortIndex==5){
+                //sprintf(ndisplay0, "IR1:%d IR2:%d", IR1[0], IR2[0]);
+                sprintf(ndisplay0, "PIR:%d%d,%04d,%04d",PROX1[0], PROX2[0], IR1[0], IR2[0]);
+                sprintf(ndisplay1, "DIST[0]:%04d M:%d",DIST1[0], _measure());
+            }
             //PORTS
             //sprintf(ndisplay0, "PORTB,%d", (int)PORTB);
             //sprintf(ndisplay1, "P1[1,2]:%d,%d M:%d",PROX1[1],PROX1[2], _measure());
@@ -254,6 +288,18 @@ void update_state(void){
     if ((state=='m'||state=='l'||state=='c')&&timeDiff>=10){
         nstate='r';
     }
+// <editor-fold defaultstate="collapsed" desc="menu index reset">
+    if (nstate!='m'&&nstate!='l'&&nstate!='c')
+    {
+        menuIndex=1;
+        logIndex=1;
+        creditIndex=1;
+    }
+    if (nstate!='s')
+        sortIndex=1;
+    if (nstate!='e')
+        endIndex=1;
+    //</editor-fold>
     state=nstate;//functions elsewhere only write to nstate
     /*
     sprintf(ndisplay0, "%c  %c  %d", state, nstate, timeDiff);
@@ -262,14 +308,6 @@ void update_state(void){
         __delay_ms(50);
         di();*/
     //reset variables eg timers
-    if (state!='m'&&state!='l'&&state!='c')
-    {
-        menuIndex=1;
-        logIndex=1;
-        creditIndex=1;
-    }
-    if (state!='e')
-        endIndex=1;
     if (state=='r'){
         eskaNoCap=0;
         eskaWCap=0;
@@ -403,6 +441,10 @@ void interrupt keypressed(void) {
                 }
                 else if (keys[keypress]=='7'||keys[keypress]=='8')
                     nstate='e';
+                else if (keys[keypress]=='B'&&sortIndex<sortSize)
+                    sortIndex++;
+                else if (keys[keypress]=='A'&&sortIndex>1)
+                    sortIndex--;
                 break;
             case 'e':
                 if (keys[keypress]=='B'&&endIndex<endSize)
@@ -480,11 +522,14 @@ void read_sensors(void){
 void sort (void){
     // <editor-fold defaultstate="collapsed" desc="DISCRETIZE">
     if (discretize_counter>2000/CYCLE_DELAY)//clockwise phase
-        ;//spin motor clockwise
+        LATA|=1<<3;//spin motor clockwise
     else if (discretize_counter>1000/CYCLE_DELAY)//pause phase
-        ;//leave motor still
-    else if (discretize_counter>0)//ccw phase
-        ;//spin motor ccw
+        LATA&=~(1<<3);//leave motor still
+    else if (discretize_counter>0){//ccw phase
+        LATA|=1<<4;//spin motor ccw
+        if (discretize_counter==1)
+            LATA&=~(1<<4);
+    }
     //no significance to discretize_counter=0;
     //</editor-fold>
     // <editor-fold defaultstate="collapsed" desc="MEASURE">
@@ -518,18 +563,27 @@ void sort (void){
     //    release_counter=release;
     if (release_counter==1000/CYCLE_DELAY)
         discretize_counter=discretize;    
-    else if (release_counter>3500/CYCLE_DELAY)
-        ;//open flaps
-    else if (release_counter>3000/CYCLE_DELAY)
-        ;//open gate
-    else if (release_counter>2500/CYCLE_DELAY)
-        ;//push
-    else if (release_counter>2000/CYCLE_DELAY)
-        ;//retract solenoid
-    else if (release_counter>1000/CYCLE_DELAY)
+    else if (release_counter>3500/CYCLE_DELAY){
+        LATC|=1<<(bottle_type-1)%3;//open flaps
+    }
+    else if (release_counter>3000/CYCLE_DELAY){
+        LATC&=~(1<<(bottle_type-1)%3);
+        LATD|=0x01;//open gate
+    }
+    else if (release_counter>2500/CYCLE_DELAY){
+        LATD&=~(0x01);
+        LATC|=0x20;//push
+    }
+    else if (release_counter>2000/CYCLE_DELAY){
+        LATC&=~(0x20);//retract solenoid
+    }
+    else if (release_counter>1000/CYCLE_DELAY){
         ;//wait
+    }
     else if (release_counter>0){
-        ;//close flaps, close gate
+        LATE|=1<<(bottle_type-1)%3;//close flaps, close gate
+        if (release_counter==1)
+            LATE&=~(1<<(bottle_type-1)%3);
     }
     //</editor-fold>
     // <editor-fold defaultstate="collapsed" desc="COUNTDOWN">

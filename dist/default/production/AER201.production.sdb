@@ -77,32 +77,34 @@
 "35
 [v _lcdNibble lcdNibble `(v  1 e 1 0 ]
 [v i2_lcdNibble lcdNibble `(v  1 e 1 0 ]
-"101 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"105 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _main main `(v  1 e 1 0 ]
-"154
+"161
 [v _update_lcd update_lcd `(v  1 e 1 0 ]
-"175
+"182
 [v _update_RTC update_RTC `(v  1 e 1 0 ]
-"194
+"201
 [v _update_display update_display `(v  1 e 1 0 ]
-"232
+"266
 [v _update_state update_state `(v  1 e 1 0 ]
-"280
+"318
 [v _display_menu display_menu `(v  1 e 1 0 ]
-"326
+"364
 [v _keypressed keypressed `II(v  1 e 1 0 ]
-"429
+"471
 [v _set_time set_time `(v  1 e 1 0 ]
-"440
+"482
 [v _read_sensors read_sensors `(v  1 e 1 0 ]
-"480
+"522
 [v _sort sort `(v  1 e 1 0 ]
-"576
+"630
 [v __measure _measure `(i  1 e 2 0 ]
-"651
+"705
 [v _readADC readADC `(v  1 e 1 0 ]
 "185 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18f4620.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"872
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
 "983
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
 "1094
@@ -130,6 +132,10 @@
 ]
 [u S79 . 1 `S61 1 . 1 0 `S70 1 . 1 0 ]
 [v _LATDbits LATDbits `VES79  1 e 1 @3980 ]
+"1316
+[v _LATE LATE `VEuc  1 e 1 @3981 ]
+"1367
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "1588
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 "1809
@@ -138,7 +144,7 @@
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2251
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-[s S132 . 1 `uc 1 CM 1 0 :3:0 
+[s S133 . 1 `uc 1 CM 1 0 :3:0 
 `uc 1 CIS 1 0 :1:3 
 `uc 1 C1INV 1 0 :1:4 
 `uc 1 C2INV 1 0 :1:5 
@@ -146,54 +152,54 @@
 `uc 1 C2OUT 1 0 :1:7 
 ]
 "3647
-[s S139 . 1 `uc 1 CM0 1 0 :1:0 
+[s S140 . 1 `uc 1 CM0 1 0 :1:0 
 `uc 1 CM1 1 0 :1:1 
 `uc 1 CM2 1 0 :1:2 
 ]
-[s S143 . 1 `uc 1 CMEN0 1 0 :1:0 
+[s S144 . 1 `uc 1 CMEN0 1 0 :1:0 
 `uc 1 CMEN1 1 0 :1:1 
 `uc 1 CMEN2 1 0 :1:2 
 ]
-[u S147 . 1 `S132 1 . 1 0 `S139 1 . 1 0 `S143 1 . 1 0 ]
-[v _CMCONbits CMCONbits `VES147  1 e 1 @4020 ]
+[u S148 . 1 `S133 1 . 1 0 `S140 1 . 1 0 `S144 1 . 1 0 ]
+[v _CMCONbits CMCONbits `VES148  1 e 1 @4020 ]
 "3711
 [v _CVRCON CVRCON `VEuc  1 e 1 @4021 ]
 "4390
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "4474
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S297 . 1 `uc 1 . 1 0 :1:0 
+[s S301 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "4518
-[s S300 . 1 `uc 1 ADON 1 0 :1:0 
+[s S304 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S304 . 1 `uc 1 . 1 0 :1:0 
+[s S308 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S311 . 1 `uc 1 . 1 0 :1:0 
+[s S315 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S314 . 1 `uc 1 . 1 0 :1:0 
+[s S318 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S317 . 1 `uc 1 . 1 0 :1:0 
+[s S321 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S320 . 1 `uc 1 . 1 0 :1:0 
+[s S324 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S323 . 1 `uc 1 . 1 0 :1:0 
+[s S327 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S326 . 1 `S297 1 . 1 0 `S300 1 . 1 0 `S304 1 . 1 0 `S311 1 . 1 0 `S314 1 . 1 0 `S317 1 . 1 0 `S320 1 . 1 0 `S323 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES326  1 e 1 @4034 ]
+[u S330 . 1 `S301 1 . 1 0 `S304 1 . 1 0 `S308 1 . 1 0 `S315 1 . 1 0 `S318 1 . 1 0 `S321 1 . 1 0 `S324 1 . 1 0 `S327 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES330  1 e 1 @4034 ]
 "4598
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "4604
@@ -208,7 +214,7 @@
 [v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
 "4966
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
-[s S172 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S173 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -218,7 +224,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "6298
-[s S181 . 1 `uc 1 . 1 0 :1:0 
+[s S182 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -227,12 +233,12 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S190 . 1 `uc 1 . 1 0 :6:0 
+[s S191 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S194 . 1 `S172 1 . 1 0 `S181 1 . 1 0 `S190 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES194  1 e 1 @4082 ]
+[u S195 . 1 `S173 1 . 1 0 `S182 1 . 1 0 `S191 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES195  1 e 1 @4082 ]
 "6604
 [v _ACKDT ACKDT `VEb  1 e 0 @32301 ]
 "6606
@@ -281,117 +287,108 @@
 [v _endIndex endIndex `i  1 e 2 0 ]
 "43
 [v _endSize endSize `i  1 e 2 0 ]
+"45
+[v _sortIndex sortIndex `i  1 e 2 0 ]
 "46
+[v _sortSize sortSize `i  1 e 2 0 ]
+"50
 [v _keys keys `C[17]uc  1 e 17 0 ]
-"47
+"51
 [v _manualDateTime manualDateTime `C[7]uc  1 e 7 0 ]
-"54
-[v _state state `uc  1 e 1 0 ]
-"55
-[v _nstate nstate `uc  1 e 1 0 ]
-"56
-[v _time time `[7]uc  1 e 7 0 ]
-"57
-[v _time_i time_i `[7]i  1 e 14 0 ]
 "58
-[v _startTime startTime `[7]i  1 e 14 0 ]
+[v _state state `uc  1 e 1 0 ]
 "59
-[v _runTime runTime `i  1 e 2 0 ]
+[v _nstate nstate `uc  1 e 1 0 ]
 "60
-[v _timeDiff timeDiff `i  1 e 2 0 ]
+[v _time time `[7]uc  1 e 7 0 ]
 "61
-[v _eskaNoCap eskaNoCap `i  1 e 2 0 ]
+[v _time_i time_i `[7]i  1 e 14 0 ]
 "62
-[v _eskaWCap eskaWCap `i  1 e 2 0 ]
+[v _startTime startTime `[7]i  1 e 14 0 ]
 "63
-[v _yopNoCap yopNoCap `i  1 e 2 0 ]
+[v _runTime runTime `i  1 e 2 0 ]
 "64
-[v _yopWCap yopWCap `i  1 e 2 0 ]
+[v _timeDiff timeDiff `i  1 e 2 0 ]
 "65
-[v _sorted_bottles sorted_bottles `i  1 e 2 0 ]
+[v _eskaNoCap eskaNoCap `i  1 e 2 0 ]
 "66
-[v _display0 display0 `[18]uc  1 e 18 0 ]
+[v _eskaWCap eskaWCap `i  1 e 2 0 ]
 "67
-[v _display1 display1 `[18]uc  1 e 18 0 ]
+[v _yopNoCap yopNoCap `i  1 e 2 0 ]
 "68
-[v _ndisplay0 ndisplay0 `[18]uc  1 e 18 0 ]
+[v _yopWCap yopWCap `i  1 e 2 0 ]
 "69
-[v _ndisplay1 ndisplay1 `[18]uc  1 e 18 0 ]
+[v _sorted_bottles sorted_bottles `i  1 e 2 0 ]
+"70
+[v _display0 display0 `[18]uc  1 e 18 0 ]
+"71
+[v _display1 display1 `[18]uc  1 e 18 0 ]
 "72
-[v _PROX1_PIN PROX1_PIN `uc  1 e 1 0 ]
+[v _ndisplay0 ndisplay0 `[18]uc  1 e 18 0 ]
 "73
-[v _PROX2_PIN PROX2_PIN `uc  1 e 1 0 ]
-"75
-[v _DIST1_PIN DIST1_PIN `uc  1 e 1 0 ]
+[v _ndisplay1 ndisplay1 `[18]uc  1 e 18 0 ]
 "76
-[v _IR1_PIN IR1_PIN `uc  1 e 1 0 ]
+[v _PROX1_PIN PROX1_PIN `uc  1 e 1 0 ]
 "77
-[v _IR2_PIN IR2_PIN `uc  1 e 1 0 ]
-"78
-[v _PROX1 PROX1 `[5]ui  1 e 10 0 ]
+[v _PROX2_PIN PROX2_PIN `uc  1 e 1 0 ]
 "79
-[v _PROX2 PROX2 `[5]ui  1 e 10 0 ]
+[v _DIST1_PIN DIST1_PIN `uc  1 e 1 0 ]
 "80
-[v _DIST1 DIST1 `[5]ui  1 e 10 0 ]
+[v _IR1_PIN IR1_PIN `uc  1 e 1 0 ]
 "81
-[v _IR1 IR1 `[5]ui  1 e 10 0 ]
+[v _IR2_PIN IR2_PIN `uc  1 e 1 0 ]
 "82
-[v _IR2 IR2 `[5]ui  1 e 10 0 ]
+[v _PROX1 PROX1 `[5]ui  1 e 10 0 ]
 "83
-[v _DIST_THRESHOLD_LOW DIST_THRESHOLD_LOW `i  1 e 2 0 ]
+[v _PROX2 PROX2 `[5]ui  1 e 10 0 ]
 "84
-[v _DIST_THRESHOLD_HI DIST_THRESHOLD_HI `i  1 e 2 0 ]
+[v _DIST1 DIST1 `[5]ui  1 e 10 0 ]
 "85
-[v _IR_THRESHOLD_LOW IR_THRESHOLD_LOW `i  1 e 2 0 ]
+[v _IR1 IR1 `[5]ui  1 e 10 0 ]
 "86
-[v _IR_THRESHOLD_HI IR_THRESHOLD_HI `i  1 e 2 0 ]
+[v _IR2 IR2 `[5]ui  1 e 10 0 ]
+"87
+[v _DIST_THRESHOLD_LOW DIST_THRESHOLD_LOW `i  1 e 2 0 ]
+"88
+[v _DIST_THRESHOLD_HI DIST_THRESHOLD_HI `i  1 e 2 0 ]
 "89
-[v _discretize discretize `i  1 e 2 0 ]
+[v _IR_THRESHOLD_LOW IR_THRESHOLD_LOW `i  1 e 2 0 ]
 "90
-[v _discretize_counter discretize_counter `i  1 e 2 0 ]
-"91
-[v _release release `i  1 e 2 0 ]
-"92
-[v _release_counter release_counter `i  1 e 2 0 ]
+[v _IR_THRESHOLD_HI IR_THRESHOLD_HI `i  1 e 2 0 ]
+"93
+[v _discretize discretize `i  1 e 2 0 ]
 "94
-[v _measure measure `i  1 e 2 0 ]
+[v _discretize_counter discretize_counter `i  1 e 2 0 ]
 "95
-[v _measure_counter measure_counter `i  1 e 2 0 ]
-"97
-[v _latestSortedBottleTime latestSortedBottleTime `[7]i  1 e 14 0 ]
+[v _release release `i  1 e 2 0 ]
+"96
+[v _release_counter release_counter `i  1 e 2 0 ]
 "98
-[v _bottle_type bottle_type `i  1 e 2 0 ]
+[v _measure measure `i  1 e 2 0 ]
+"99
+[v _measure_counter measure_counter `i  1 e 2 0 ]
 "101
+[v _latestSortedBottleTime latestSortedBottleTime `[7]i  1 e 14 0 ]
+"102
+[v _bottle_type bottle_type `i  1 e 2 0 ]
+"105
 [v _main main `(v  1 e 1 0 ]
 {
-"153
+"160
 } 0
-"232
+"266
 [v _update_state update_state `(v  1 e 1 0 ]
 {
-"234
-[v update_state@i i `uc  1 a 1 52 ]
-"279
+"268
+[v update_state@i i `uc  1 a 1 54 ]
+"317
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-{
-"11
-[v ___awdiv@quotient quotient `i  1 a 2 6 ]
-"12
-[v ___awdiv@sign sign `uc  1 a 1 5 ]
-[v ___awdiv@counter counter `uc  1 a 1 4 ]
-"8
-[v ___awdiv@dividend dividend `i  1 p 2 0 ]
-[v ___awdiv@divisor divisor `i  1 p 2 2 ]
-"42
-} 0
-"154 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"161
 [v _update_lcd update_lcd `(v  1 e 1 0 ]
 {
-"155
+"162
 [v update_lcd@flag flag `i  1 a 2 43 ]
-"174
+"181
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\strcpy.c
 [v _strcpy strcpy `(*.39uc  1 e 2 0 ]
@@ -416,41 +413,41 @@
 "13 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
 {
-[s S500 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[s S514 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
 "21
-[v printf@pb pb `S500  1 a 4 38 ]
+[v printf@pb pb `S514  1 a 4 38 ]
 "15
 [v printf@ap ap `[1]*.39v  1 a 2 36 ]
 "13
 [v printf@f f `*.34Cuc  1 p 2 34 ]
 "28
 } 0
-"194 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"201 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _update_display update_display `(v  1 e 1 0 ]
 {
-"231
+"265
 } 0
-"280
+"318
 [v _display_menu display_menu `(v  1 e 1 0 ]
 {
-"282
+"320
 [v display_menu@menuIndexPtr menuIndexPtr `*.39i  1 a 2 8 ]
-"281
+"319
 [v display_menu@menuSelection menuSelection `i  1 a 2 4 ]
-"283
+"321
 [v display_menu@menuSizePtr menuSizePtr `*.39i  1 a 2 2 ]
-"284
+"322
 [v display_menu@selector selector `i  1 a 2 0 ]
-"325
+"363
 } 0
 "13 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S500 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[s S514 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
 "29
-[v sprintf@pb pb `S500  1 a 4 46 ]
+[v sprintf@pb pb `S514  1 a 4 48 ]
 "28
-[v sprintf@ap ap `[1]*.39v  1 a 2 44 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 46 ]
 "13
 [v sprintf@wh wh `*.39uc  1 p 2 34 ]
 [v sprintf@f f `*.34Cuc  1 p 2 36 ]
@@ -475,9 +472,9 @@
 [v __doprnt@flag flag `uc  1 a 1 30 ]
 "506
 [v __doprnt@prec prec `c  1 a 1 23 ]
-[s S500 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[s S514 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
 "458
-[v __doprnt@pb pb `*.39S500  1 p 2 12 ]
+[v __doprnt@pb pb `*.39S514  1 p 2 12 ]
 [v __doprnt@f f `*.34Cuc  1 p 2 14 ]
 [v __doprnt@ap ap `*.39*.39v  1 p 2 16 ]
 "1541
@@ -521,12 +518,25 @@
 [v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
 "31
 } 0
-"175 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"8
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"42
+} 0
+"182 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _update_RTC update_RTC `(v  1 e 1 0 ]
 {
-"186
-[v update_RTC@i i `uc  1 a 1 10 ]
 "193
+[v update_RTC@i i `uc  1 a 1 10 ]
+"200
 } 0
 "53 C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
 [v _I2C_Master_Read I2C_Master_Read `(uc  1 e 1 0 ]
@@ -540,35 +550,35 @@
 [v I2C_Master_Read@a a `uc  1 a 1 1 ]
 "64
 } 0
-"480 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"522 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _sort sort `(v  1 e 1 0 ]
 {
-"494
+"539
 [v sort@i i `i  1 a 2 24 ]
-"575
+"629
 } 0
-"576
+"630
 [v __measure _measure `(i  1 e 2 0 ]
 {
-"626
-[v __measure@i_488 i `uc  1 a 1 17 ]
-"621
-[v __measure@i_487 i `uc  1 a 1 16 ]
-"616
-[v __measure@i_486 i `uc  1 a 1 15 ]
-"611
-[v __measure@i_485 i `uc  1 a 1 14 ]
-"605
-[v __measure@i_484 i `uc  1 a 1 13 ]
-"601
-[v __measure@i_483 i `uc  1 a 1 12 ]
-"595
-[v __measure@i_482 i `uc  1 a 1 11 ]
-"591
+"680
+[v __measure@i_502 i `uc  1 a 1 17 ]
+"675
+[v __measure@i_501 i `uc  1 a 1 16 ]
+"670
+[v __measure@i_500 i `uc  1 a 1 15 ]
+"665
+[v __measure@i_499 i `uc  1 a 1 14 ]
+"659
+[v __measure@i_498 i `uc  1 a 1 13 ]
+"655
+[v __measure@i_497 i `uc  1 a 1 12 ]
+"649
+[v __measure@i_496 i `uc  1 a 1 11 ]
+"645
 [v __measure@i i `uc  1 a 1 10 ]
-"588
+"642
 [v __measure@measurement measurement `i  1 a 2 18 ]
-"650
+"704
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -591,12 +601,12 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"429 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"471 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _set_time set_time `(v  1 e 1 0 ]
 {
-"433
+"475
 [v set_time@i i `uc  1 a 1 3 ]
-"439
+"481
 } 0
 "47 C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
@@ -619,21 +629,21 @@
 {
 "27
 } 0
-"440 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"482 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _read_sensors read_sensors `(v  1 e 1 0 ]
 {
-"445
+"487
 [v read_sensors@i i `uc  1 a 1 6 ]
-"479
+"521
 } 0
-"651
+"705
 [v _readADC readADC `(v  1 e 1 0 ]
 {
 [v readADC@channel channel `uc  1 a 1 wreg ]
 [v readADC@channel channel `uc  1 a 1 wreg ]
-"653
+"707
 [v readADC@channel channel `uc  1 a 1 1 ]
-"659
+"713
 } 0
 "14 C:\Users\Clement Wan\Documents\GitHub\AER201\lcd.c
 [v _initLCD initLCD `(v  1 e 1 0 ]
@@ -678,20 +688,20 @@
 [v ___lldiv@divisor divisor `ul  1 p 4 4 ]
 "31
 } 0
-"326 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
+"364 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _keypressed keypressed `II(v  1 e 1 0 ]
 {
-"329
+"367
 [v keypressed@i i `i  1 a 2 58 ]
-"330
+"368
 [v keypressed@keypress keypress `uc  1 a 1 60 ]
-"428
+"470
 } 0
 "13 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\printf.c
 [v i2_printf printf `(i  1 e 2 0 ]
 {
-[s S500 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
-[v i2printf@pb printf `S500  1 a 4 38 ]
+[s S514 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[v i2printf@pb printf `S514  1 a 4 38 ]
 [v i2printf@ap printf `[1]*.39v  1 a 2 36 ]
 [v i2printf@f f `*.34Cuc  1 p 2 34 ]
 "28
@@ -707,8 +717,8 @@
 [v i2__doprnt@flag _doprnt `uc  1 a 1 30 ]
 [v i2__doprnt@prec _doprnt `c  1 a 1 23 ]
 [v i2__doprnt@idx _doprnt `uc  1 a 1 22 ]
-[s S500 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
-[v i2__doprnt@pb pb `*.39S500  1 p 2 12 ]
+[s S514 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
+[v i2__doprnt@pb pb `*.39S514  1 p 2 12 ]
 [v i2__doprnt@f f `*.34Cuc  1 p 2 14 ]
 [v i2__doprnt@ap ap `*.39*.39v  1 p 2 16 ]
 "1541
