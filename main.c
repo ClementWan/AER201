@@ -43,17 +43,17 @@ int endIndex=1;
 int endSize=4-1;
 
 int sortIndex=1;
-int sortSize=5;
+int sortSize=6;
     //</editor-fold>
 // <editor-fold defaultstate="collapsed" desc=" GLOBAL VARS">
 
 const char keys[] = "123A456B789C*0#D"; 
 const char manualDateTime[7] = {  0x00, //Seconds 
-                            0x00, //Minutes
-                            0x00, //24 hour mode
-                            0x00, //WEEKDAY
-                            0x01, //DAY OF MONTH
-                            0x00, //MONTH
+                            0x33, //Minutes
+                            0x14, //24 hour mode
+                            0x03, //WEEKDAY (starts sunday?)
+                            0x028, //DAY OF MONTH
+                            0x02, //MONTH
                             0x17};//YEAR
 char state='r';//states: reset, menu, logs, credits, sort, sense(?), end, X(error/emergency stop)
 char nstate='r';//functions can change nstate, but only update_state can change state
@@ -132,7 +132,7 @@ void main(void) {
     I2C_Master_Init(10000); //Initialize I2C Master with 100KHz clock
     //</editor-fold>
     di(); // Disable all interrupts
-    set_time();//RTC BATTERY IS BROKEN
+    //set_time();//RTC BATTERY IS BROKEN
     while(1){
         di();
         update_RTC();
@@ -222,20 +222,6 @@ void update_display(void){
                 sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
                 sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
             }
-            /*//PORTS
-            else if (sortIndex==3){
-                int a=0;
-                for (char i=8;i>0;i--){
-                    readADC(i-1);
-                    a*=10;
-                    a+=(ADRESH>>1)&0b1;
-                }
-                //readADC(2);
-                //a=ADRESH;
-                sprintf(ndisplay0, "A:%07d",a);
-                //sprintf(ndisplay0, "A:%d%d%d%d%d%d%d%d", (PORTA>>7)&1, (PORTA>>6)&1, (PORTA>>5)&1, (PORTA>>4)&1, (PORTA>3)&1, (PORTA>>2)&1, (PORTA>>1)&1, (PORTA>>0)&1);
-                sprintf(ndisplay1, "B:%d%d%d%d%d%d%d%d M:%d", (PORTB>>7)&1, (PORTB>>6)&1, (PORTB>>5)&1, (PORTB>>4)&1, (PORTB>3)&1, (PORTB>>2)&1, (PORTB>>1)&1, (PORTB>>0)&1, _measure());
-            }*/
             //SENSORS
             else if (sortIndex==3){
                 //sprintf(ndisplay0, "IR1:%d IR2:%d", IR1[0], IR2[0]);
@@ -251,6 +237,20 @@ void update_display(void){
                 //sprintf(ndisplay0, "IR1:%d IR2:%d", IR1[0], IR2[0]);
                 sprintf(ndisplay0, "PIR:%d%d,%04d,%04d",PROX1[0], PROX2[0], IR1[0], IR2[0]);
                 sprintf(ndisplay1, "DIST[0]:%04d M:%d",DIST1[0], _measure());
+            }
+            //PORTS
+            else if (sortIndex==6){
+                int a=0;
+                for (char i=8;i>0;i--){
+                    readADC(i-1);
+                    a*=10;
+                    a+=((ADRESH>>1)&0b1)%10;
+                }
+                //readADC(2);
+                //a=ADRESH;
+                sprintf(ndisplay0, "A:%07d",a);
+                //sprintf(ndisplay0, "A:%d%d%d%d%d%d%d%d", (PORTA>>7)&1, (PORTA>>6)&1, (PORTA>>5)&1, (PORTA>>4)&1, (PORTA>3)&1, (PORTA>>2)&1, (PORTA>>1)&1, (PORTA>>0)&1);
+                sprintf(ndisplay1, "B:%d%d%d%d%d%d%d%d M:%d", (PORTB>>7)&1, (PORTB>>6)&1, (PORTB>>5)&1, (PORTB>>4)&1, (PORTB>3)&1, (PORTB>>2)&1, (PORTB>>1)&1, (PORTB>>0)&1, _measure());
             }
             //PORTS
             //sprintf(ndisplay0, "PORTB,%d", (int)PORTB);

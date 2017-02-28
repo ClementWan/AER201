@@ -91,8 +91,6 @@
 [v _display_menu display_menu `(v  1 e 1 0 ]
 "364
 [v _keypressed keypressed `II(v  1 e 1 0 ]
-"471
-[v _set_time set_time `(v  1 e 1 0 ]
 "482
 [v _read_sensors read_sensors `(v  1 e 1 0 ]
 "522
@@ -168,38 +166,38 @@
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "4474
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S301 . 1 `uc 1 . 1 0 :1:0 
+[s S297 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "4518
-[s S304 . 1 `uc 1 ADON 1 0 :1:0 
+[s S300 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S308 . 1 `uc 1 . 1 0 :1:0 
+[s S304 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S315 . 1 `uc 1 . 1 0 :1:0 
+[s S311 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S318 . 1 `uc 1 . 1 0 :1:0 
+[s S314 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S321 . 1 `uc 1 . 1 0 :1:0 
+[s S317 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S324 . 1 `uc 1 . 1 0 :1:0 
+[s S320 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S327 . 1 `uc 1 . 1 0 :1:0 
+[s S323 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S330 . 1 `S301 1 . 1 0 `S304 1 . 1 0 `S308 1 . 1 0 `S315 1 . 1 0 `S318 1 . 1 0 `S321 1 . 1 0 `S324 1 . 1 0 `S327 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES330  1 e 1 @4034 ]
+[u S326 . 1 `S297 1 . 1 0 `S300 1 . 1 0 `S304 1 . 1 0 `S311 1 . 1 0 `S314 1 . 1 0 `S317 1 . 1 0 `S320 1 . 1 0 `S323 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES326  1 e 1 @4034 ]
 "4598
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "4604
@@ -380,7 +378,7 @@
 [v _update_state update_state `(v  1 e 1 0 ]
 {
 "268
-[v update_state@i i `uc  1 a 1 54 ]
+[v update_state@i i `uc  1 a 1 64 ]
 "317
 } 0
 "161
@@ -425,19 +423,23 @@
 "201 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _update_display update_display `(v  1 e 1 0 ]
 {
+"244
+[v update_display@i i `uc  1 a 1 2 ]
+"243
+[v update_display@a a `i  1 a 2 0 ]
 "265
 } 0
 "318
 [v _display_menu display_menu `(v  1 e 1 0 ]
 {
 "320
-[v display_menu@menuIndexPtr menuIndexPtr `*.39i  1 a 2 8 ]
+[v display_menu@menuIndexPtr menuIndexPtr `*.39i  1 a 2 75 ]
 "319
-[v display_menu@menuSelection menuSelection `i  1 a 2 4 ]
+[v display_menu@menuSelection menuSelection `i  1 a 2 71 ]
 "321
-[v display_menu@menuSizePtr menuSizePtr `*.39i  1 a 2 2 ]
+[v display_menu@menuSizePtr menuSizePtr `*.39i  1 a 2 69 ]
 "322
-[v display_menu@selector selector `i  1 a 2 0 ]
+[v display_menu@selector selector `i  1 a 2 67 ]
 "363
 } 0
 "13 C:\Program Files (x86)\Microchip\xc8\v1.40\sources\common\sprintf.c
@@ -445,9 +447,9 @@
 {
 [s S514 __prbuf 4 `*.39uc 1 ptr 2 0 `*.37(v 1 func 2 2 ]
 "29
-[v sprintf@pb pb `S514  1 a 4 48 ]
+[v sprintf@pb pb `S514  1 a 4 58 ]
 "28
-[v sprintf@ap ap `[1]*.39v  1 a 2 46 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 56 ]
 "13
 [v sprintf@wh wh `*.39uc  1 p 2 34 ]
 [v sprintf@f f `*.34Cuc  1 p 2 36 ]
@@ -538,7 +540,23 @@
 [v update_RTC@i i `uc  1 a 1 10 ]
 "200
 } 0
-"53 C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+"47 C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
+[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+{
+[v I2C_Master_Write@d d `ui  1 p 2 1 ]
+"51
+} 0
+"41
+[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+{
+"45
+} 0
+"29
+[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+{
+"33
+} 0
+"53
 [v _I2C_Master_Read I2C_Master_Read `(uc  1 e 1 0 ]
 {
 [v I2C_Master_Read@a a `uc  1 a 1 wreg ]
@@ -549,6 +567,11 @@
 "56
 [v I2C_Master_Read@a a `uc  1 a 1 1 ]
 "64
+} 0
+"24
+[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+{
+"27
 } 0
 "522 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _sort sort `(v  1 e 1 0 ]
@@ -600,34 +623,6 @@
 [v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
-} 0
-"471 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
-[v _set_time set_time `(v  1 e 1 0 ]
-{
-"475
-[v set_time@i i `uc  1 a 1 3 ]
-"481
-} 0
-"47 C:\Users\Clement Wan\Documents\GitHub\AER201\I2C.c
-[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
-{
-[v I2C_Master_Write@d d `ui  1 p 2 1 ]
-"51
-} 0
-"41
-[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
-{
-"45
-} 0
-"29
-[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
-{
-"33
-} 0
-"24
-[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
-{
-"27
 } 0
 "482 C:\Users\Clement Wan\Documents\GitHub\AER201\main.c
 [v _read_sensors read_sensors `(v  1 e 1 0 ]
