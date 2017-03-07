@@ -3873,9 +3873,10 @@ unsigned int IR1[5];
 unsigned int IR2[5];
 int DIST_THRESHOLD_LOW=1024/4-1;
 int DIST_THRESHOLD_HI=1024*3/4-1;
-int IR_THRESHOLD_LOW=1024/4-1;
-int IR_THRESHOLD_HI=1024*3/4-1;
 
+
+int IR_THRESHOLD_LOW=35;
+int IR_THRESHOLD_HI=40;
 
 int discretize;
 int discretize_counter;
@@ -3935,7 +3936,7 @@ while(state=='x');
 _delay((unsigned long)((40-10)*(10000000/4000.0)));
 (INTCONbits.GIE = 0);
 
-# 157
+# 158
 }
 
 return;
@@ -4084,7 +4085,7 @@ endIndex=1;
 
 state=nstate;
 
-# 311
+# 312
 if (state=='r'){
 eskaNoCap=0;
 eskaWCap=0;
@@ -4237,7 +4238,7 @@ break;
 }
 INT1IF = 0;
 
-# 469
+# 470
 }
 }
 void set_time(void){
@@ -4277,7 +4278,7 @@ IR2[0]=16*16*ADRESH+ADRESL;
 PROX1[0]=(PORTB>>PROX1_PIN)&1;
 PROX2[0]=(PORTB>>PROX2_PIN)&1;
 
-# 521
+# 522
 }
 void sort (void){
 
@@ -4358,11 +4359,11 @@ release_counter--;
 if (time_i[1]*60-latestSortedBottleTime[1]*60+time_i[0]-latestSortedBottleTime[0]>=15)
 nstate='e';
 
-# 629
+# 630
 }
 int _measure(void){
 
-# 642
+# 643
 int measurement=0;
 
 

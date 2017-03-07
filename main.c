@@ -86,9 +86,10 @@ unsigned int IR1[5];
 unsigned int IR2[5];
 int DIST_THRESHOLD_LOW=1024/4-1;
 int DIST_THRESHOLD_HI=1024*3/4-1;
-int IR_THRESHOLD_LOW=1024/4-1;
-int IR_THRESHOLD_HI=1024*3/4-1;
-
+//int IR_THRESHOLD_LOW=1024/4-1;
+//int IR_THRESHOLD_HI=1024*3/4-1;
+int IR_THRESHOLD_LOW=35;//experimentally verified
+int IR_THRESHOLD_HI=40;
 
 int discretize;//=3000/delay;//3 seconds for discretize step at the start of the default substate
 int discretize_counter;//=3000/delay;

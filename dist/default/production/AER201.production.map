@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.40\dat\en_msgs.txt -cs \
   -h+dist/default/production\AER201.production.sym \
   --cmf=dist/default/production\AER201.production.cmf -z -Q18F4620 \
-  -oC:\Users\CLEMEN~1\AppData\Local\Temp\s21o.2 \
+  -oC:\Users\CLEMEN~1\AppData\Local\Temp\s9kg.2 \
   -Mdist/default/production/AER201.production.map -E1 -ver=XC8 \
   -ASTACK=045Ah-0f7fh -pstack=STACK -ACODE=00h-0FFFFh -ACONST=00h-0FFFFh \
   -ASMALLCONST=01000h-010FFhx240 -AMEDIUMCONST=01000h-0FFFFh \
@@ -25,7 +25,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\CLEMEN~1\AppData\Local\Temp\s21o.obj \
+  C:\Users\CLEMEN~1\AppData\Local\Temp\s9kg.obj \
   dist/default/production\AER201.production.obj 
 
 Object code version is 3.11
@@ -38,7 +38,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\CLEMEN~1\AppData\Local\Temp\s21o.obj
+C:\Users\CLEMEN~1\AppData\Local\Temp\s9kg.obj
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -1002,7 +1002,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 105 in file "main.c"
+		line 106 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1038,7 +1038,7 @@ Total ram usage:        1 bytes
 
  *************** function _update_state *****************
  Defined at:
-		line 266 in file "main.c"
+		line 267 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1070,7 +1070,7 @@ Total ram usage:        3 bytes
 
  *************** function _update_lcd *****************
  Defined at:
-		line 161 in file "main.c"
+		line 162 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1206,7 +1206,7 @@ Total ram usage:        8 bytes
 
  *************** function _update_display *****************
  Defined at:
-		line 201 in file "main.c"
+		line 202 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1243,7 +1243,7 @@ Total ram usage:       14 bytes
 
  *************** function _display_menu *****************
  Defined at:
-		line 318 in file "main.c"
+		line 319 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1540,7 +1540,7 @@ Total ram usage:        8 bytes
 
  *************** function _update_RTC *****************
  Defined at:
-		line 182 in file "main.c"
+		line 183 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1732,7 +1732,7 @@ Total ram usage:        1 bytes
 
  *************** function _sort *****************
  Defined at:
-		line 522 in file "main.c"
+		line 523 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1764,7 +1764,7 @@ Total ram usage:        6 bytes
 
  *************** function __measure *****************
  Defined at:
-		line 630 in file "main.c"
+		line 631 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1873,7 +1873,7 @@ Total ram usage:        6 bytes
 
  *************** function _read_sensors *****************
  Defined at:
-		line 482 in file "main.c"
+		line 483 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1903,7 +1903,7 @@ Total ram usage:        5 bytes
 
  *************** function _readADC *****************
  Defined at:
-		line 705 in file "main.c"
+		line 706 in file "main.c"
  Parameters:    Size  Location     Type
   channel         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -2089,7 +2089,7 @@ Total ram usage:       13 bytes
 
  *************** function _keypressed *****************
  Defined at:
-		line 364 in file "main.c"
+		line 365 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
