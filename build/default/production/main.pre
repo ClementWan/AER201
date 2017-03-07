@@ -3890,6 +3890,8 @@ int latestSortedBottleTime[7];
 int bottle_type=0;
 
 
+int cycle_time1=0;
+int cycle_time2=0;
 void main(void) {
 
 discretize=3000/(40);
@@ -3936,7 +3938,7 @@ while(state=='x');
 _delay((unsigned long)((40-10)*(10000000/4000.0)));
 (INTCONbits.GIE = 0);
 
-# 158
+# 160
 }
 
 return;
@@ -3957,13 +3959,15 @@ if (flag){
 lcdInst(0x01);_delay((unsigned long)((10)*(10000000/4000.0)));;
 lcdInst(0b10000000);;
 printf(display0);
+lcdInst(0b10000000);;
+printf("%04d",cycle_time2);
 lcdInst(0b11000000);;
 printf(display1);
 lcdInst(0b10010000);;
 }
 }
 void update_RTC(void){
-
+cycle_time1++;
 
 I2C_Master_Start();
 I2C_Master_Write(0b11010000);
@@ -3975,7 +3979,11 @@ I2C_Master_Start();
 I2C_Master_Write(0b11010001);
 for(unsigned char i=0;i<0x06;i++){
 time[i] = I2C_Master_Read(1);
+if (time_i[i]!=(time[i] & 0x0F) + ((time[i] & 0xF0)>>4)*10){
+cycle_time2=cycle_time1;
+cycle_time1=0;
 time_i[i]=(time[i] & 0x0F) + ((time[i] & 0xF0)>>4)*10;
+}
 }
 timeDiff=time_i[1]*60-startTime[1]*60+time_i[0]-startTime[0];
 time[6] = I2C_Master_Read(0);
@@ -4006,7 +4014,7 @@ sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
 sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
 }
 
-# 240
+# 249
 else if (sortIndex==3){
 
 sprintf(ndisplay0, "P1[0-2]:%d,%d,%d", PROX1[0], PROX1[1], PROX1[2]);
@@ -4072,7 +4080,7 @@ endIndex=1;
 
 state=nstate;
 
-# 312
+# 320
 if (state=='r'){
 eskaNoCap=0;
 eskaWCap=0;
@@ -4225,7 +4233,7 @@ break;
 }
 INT1IF = 0;
 
-# 470
+# 478
 }
 }
 void set_time(void){
@@ -4265,7 +4273,7 @@ IR2[0]=16*16*ADRESH+ADRESL;
 PROX1[0]=(PORTB>>PROX1_PIN)&1;
 PROX2[0]=(PORTB>>PROX2_PIN)&1;
 
-# 522
+# 530
 }
 void sort (void){
 
@@ -4346,11 +4354,11 @@ release_counter--;
 if (time_i[1]*60-latestSortedBottleTime[1]*60+time_i[0]-latestSortedBottleTime[0]>=15)
 nstate='e';
 
-# 630
+# 638
 }
 int _measure(void){
 
-# 643
+# 651
 int measurement=0;
 
 
