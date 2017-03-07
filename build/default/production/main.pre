@@ -3830,17 +3830,17 @@ int endIndex=1;
 int endSize=4-1;
 
 int sortIndex=1;
-int sortSize=6;
+int sortSize=5;
 
 
 
 const char keys[] = "123A456B789C*0#D";
 const char manualDateTime[7] = { 0x00,
-0x33,
-0x14,
-0x03,
-0x028,
-0x02,
+0x00,
+0x00,
+0x00,
+0x01,
+0x00,
 0x17};
 char state='r';
 char nstate='r';
@@ -3920,7 +3920,7 @@ nRBPU = 0;
 I2C_Master_Init(10000);
 
 (INTCONbits.GIE = 0);
-
+set_time();
 while(1){
 (INTCONbits.GIE = 0);
 update_RTC();
@@ -4006,6 +4006,7 @@ sprintf(ndisplay0, "RC:%d MC:%d", release_counter, measure_counter);
 sprintf(ndisplay1, "DC:%d MEAS:%d", discretize_counter, _measure());
 }
 
+# 240
 else if (sortIndex==3){
 
 sprintf(ndisplay0, "P1[0-2]:%d,%d,%d", PROX1[0], PROX1[1], PROX1[2]);
@@ -4020,20 +4021,6 @@ else if (sortIndex==5){
 
 sprintf(ndisplay0, "PIR:%d%d,%04d,%04d",PROX1[0], PROX2[0], IR1[0], IR2[0]);
 sprintf(ndisplay1, "DIST[0]:%04d M:%d",DIST1[0], _measure());
-}
-
-else if (sortIndex==6){
-int a=0;
-for (char i=8;i>0;i--){
-readADC(i-1);
-a*=10;
-a+=((ADRESH>>1)&0b1)%10;
-}
-
-
-sprintf(ndisplay0, "A:%07d",a);
-
-sprintf(ndisplay1, "B:%d%d%d%d%d%d%d%d M:%d", (PORTB>>7)&1, (PORTB>>6)&1, (PORTB>>5)&1, (PORTB>>4)&1, (PORTB>3)&1, (PORTB>>2)&1, (PORTB>>1)&1, (PORTB>>0)&1, _measure());
 }
 
 
